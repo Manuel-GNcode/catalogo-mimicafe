@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+.main_paragrah {
+  font-size: 12px;
+  text-shadow: 
+    2px 2px 0 #fff,
+    -2px 2px 0 #fff,
+    -2px -2px 0 #fff,
+    2px -2px 0 #fff;
+  line-height: 12px;
+}
+.main_subtitle {
+  font-size: 18px;
+  line-height: 19px;
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  src: url('/fonts/MontserratAlternates-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-white: rgba(255, 255, 255, 1);
   --color-white-opacity: rgba(255, 255, 255, 0.3);
@@ -20,4 +42,12 @@
   --color-green-yellow: hsl(71.25, 39%, 68%);
   --color-lighter-purple: hsl(240, 50%, 96%);
   --color-light-orange: hsl(22.258, 86%, 86%);
+
+  --font-montserrat: "Montserrat Alternates", 'sans-serif';
+}
+
+@layer components {
+  .main_avatar {
+    @apply h-auto absolute -top-14;
+  }
 }

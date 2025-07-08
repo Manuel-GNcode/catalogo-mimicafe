@@ -7,11 +7,22 @@
     <title>Mimicafe</title>
     <link rel="stylesheet" href="/src/style.css">
   </head>
-  <body class="">
-    <section id="main" class="bg-green h-dvh w-full relative">
-      <div id="main_ctr" class="w-1/4 max-w-[458px] min-w-[200px] aspect-1/1 bg-gray rounded-full relative left-1/2 top-1/6 -translate-x-1/2 p-4">
-        <div id="main_wrapper" class="size-full border-4 border-darker-pink rounded-full bg-gradient-to-b from-dark-pink to-yellow">
+  <body class="font-montserrat">
+    <section id="main" class="bg-green h-dvh w-full relative overflow-hidden">
+      <div id="main_ctr" class="w-1/2 max-w-[400px] min-w-[200px] aspect-1/1 bg-gray rounded-full relative left-1/2 top-1/6 -translate-x-1/2 p-4 text-center">
+        <div id="main_wrapper" class="size-full border-4 border-darker-pink rounded-full bg-gradient-to-b from-dark-pink to-yellow p-8 flex flex-col gap-4 items-center justify-center relative">
+          <img src="images/logo_mimicafe.webp" alt="Logo Mimicafe" class="w-full h-auto">
+          <p class="main_paragrah text-gray w-50">Cada bocado es una pequeña rebelión contra lo ordinario</p>
 
+          <span class="main_subtitle text-purple absolute -bottom-2 bg-light-green border-2 border-white rounded-full px-2 py-1 w-2/3">Descubre nuestras delicias</span>
+        </div>
+
+        <div id="main_avatars" class="absolute size-full left-0 top-0">
+          <img src="images/avatars/personaje_izquierda.webp" alt="Avatar left" id="avatar-left" class="main_avatar w-5/6 left-0 -translate-x-9/10">
+
+          <img src="images/avatars/personaje_derecha.webp" alt="Avatar right" id="avatar-left" class="main_avatar w-11/10 right-0 translate-x-3/4">
+
+          <img src="images/avatars/personaje_centro.webp" alt="Avatar left" id="avatar-left" class="main_avatar w-1/2 left-1/2 -translate-x-1/2 -top-0 -translate-y-2/3">
         </div>
       </div>
     </section>
