@@ -12,7 +12,7 @@
       <!-- Background -->
       <img src="images/fondo_estrellas.webp" alt="Background" class="absolute left-0 top-0 w-full h-full object-cover opacity-60">
 
-      <div id="main_ctr" class="w-1/2 max-w-[400px] min-w-[200px] aspect-1/1 bg-gray rounded-full relative left-1/2 top-1/6 -translate-x-1/2 p-4 text-center">
+      <div id="main_ctr" class="w-1/2 max-w-[400px] min-w-[200px] aspect-1/1 bg-gray rounded-full relative left-1/2 top-1/4 sm:top-1/6 -translate-x-1/2 p-2 text-center sm:p-4 ">
         <!-- Avatars -->
         <div id="main_avatars" class="absolute size-full left-0 top-0">
           <img src="images/avatars/personaje_izquierda.webp" alt="Avatar left" id="avatar-left" class="main_avatar w-5/6 left-0 -translate-x-9/10">
@@ -22,28 +22,37 @@
         <!-- food buttons -->
         <div id="main_buttons" class="absolute size-full left-0 top-0 rounded-full">
           <button id="button_tortas" class="main_button transform -translate-y-1/2 rotate-140 bg-orange">
-            <img src="images/icons/icono_torta.svg" alt="Icono de torta" class="size-2/3 -rotate-140">
+            <div class="-rotate-140 main_button-ctr">
+              <img src="images/icons/icono_torta.svg" alt="Icono de torta">
+              <p class="main_title">Tortas</p>
+            </div>
           </button>
           <button id="button_malteadas" class="main_button transform -translate-y-1/2 rotate-90 bg-light-purple">
-            <img src="images/icons/icono_malteada.svg" alt="Icono de malteda" class="size-2/3 -rotate-90">
+            <div class="-rotate-90 main_button-ctr">
+              <img src="images/icons/icono_malteada.svg" alt="Icono de malteda">
+              <p class="main_title">Malteadas</p>
+            </div>
           </button>
           <button id="button_helados" class="main_button transform -translate-y-1/2 rotate-40 bg-green-yellow">
-            <img src="images/icons/icono_helado.svg" alt="Icono de helado" class="size-2/3 -rotate-40">
+            <div class="-rotate-40 main_button-ctr">
+              <img src="images/icons/icono_helado.svg" alt="Icono de helado" class="size-2/3 -rotate-40">
+              <p class="main_title">Helados</p>
+            </div>
           </button>
         </div>
         
         <!-- logo y text -->
-        <div id="main_wrapper" class="size-full border-4 border-darker-pink rounded-full bg-gradient-to-b from-dark-pink to-yellow p-8 flex flex-col gap-4 items-center justify-center relative">
+        <div id="main_wrapper" class="size-full border-4 border-darker-pink rounded-full bg-gradient-to-b from-dark-pink to-yellow p-8 flex flex-col gap-2 items-center justify-center relative sm:gap-4">
           <img src="images/logo_mimicafe.webp" alt="Logo Mimicafe" class="w-full h-auto">
-          <p class="main_paragrah text-gray w-50">Cada bocado es una pequeña rebelión contra lo ordinario</p>
-          <span class="main_subtitle text-purple absolute -bottom-1 bg-light-green border-2 border-white rounded-full px-2 py-1 w-2/3">Descubre nuestras delicias</span>
+          <p class="main_paragrah text-gray w-50 text-[10px]/3 sm:text-[12px]/4">Cada bocado es una pequeña rebelión contra lo ordinario</p>
+          <span class="text-[12px]/4 text-purple absolute -bottom-1 bg-light-green border-2 border-white rounded-full px-2 py-1 w-2/3 sm:text-[16px]/4">Descubre nuestras delicias</span>
         </div>
 
         <img src="images/avatars/personaje_centro.webp" alt="Avatar top" id="avatar-top" class="main_avatar w-1/2 left-1/2 -translate-x-1/2 -top-0 -translate-y-7/10">
       </div>
 
       <!-- vertical text -->
-      <div id="main_catalogo" class="absolute left-1/20 -top-4 bg-pastel-viole text-white border-4 border-white rounded-full py-14 flex flex-col items-center">
+      <div id="main_catalogo" class="absolute left-1/40 -top-4 bg-pastel-viole text-white border-4 border-white rounded-full px-0.5 py-14 flex flex-col items-center text-[14px] sm:text-base">
         <p class="-mb-2">C</p>
         <p class="-mb-2">a</p>
         <p class="-mb-2">t</p>
@@ -55,10 +64,27 @@
       </div>
 
       <!-- social media -->
-      <div id="main_social" class="absolute right-1/20 top-1/2 -translate-y-1/2 bg-white-opacity border-4 border-white py-4 px-2 rounded-2xl flex flex-col gap-2">
-        <img src="images/icons/icono_whatsapp.svg" alt="Icono de Whatsapp" class="size-12">
-        <img src="images/icons/icono_youtube.svg" alt="Icono de Youtube" class="size-12">
-        <img src="images/icons/icono_instagram.svg" alt="Icono de Instagram" class="size-12">
+      <div id="main_social" class="absolute right-1/40 top-1/2 -translate-y-1/2 bg-white-opacity border-4 border-white py-4 px-2 rounded-2xl flex flex-col gap-2">
+        <a href="#">
+          <img src="images/icons/icono_whatsapp.svg" alt="Icono de Whatsapp">
+        </a>
+        <a href="#">
+          <img src="images/icons/icono_youtube.svg" alt="Icono de Youtube">
+        </a>
+        <a href="#">
+          <img src="images/icons/icono_instagram.svg" alt="Icono de Instagram">
+        </a>
+      </div>
+
+      <!-- sections buttons -->
+      <div id="main_bitacora" class="absolute w-1/4 max-w-60 min-w-40 aspect-1/1 bg-violet border-4 border-blue rounded-full -left-1/20 -bottom-1/10 sm:-bottom-1/6">
+        <span class="main_bitacora-span bg-pink transform -translate-y-1/2 -rotate-45"></span>
+        <span class="main_bitacora-span bg-orange-pink transform -translate-y-1/2 -rotate-15"></span>
+      </div>
+
+      <div id="main_home" class="absolute w-1/4 max-w-60 min-w-40 aspect-1/1 bg-gray-green border-4 border-green rounded-full -right-1/20 -bottom-1/10 sm:-bottom-1/6" >
+        <span class="main_home-span bg-pink transform -translate-y-1/2 -rotate-135"></span>
+        <span class="main_home-span bg-orange-pink transform -translate-y-1/2 -rotate-165"></span>
       </div>
     </section>
 

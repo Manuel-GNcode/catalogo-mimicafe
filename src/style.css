@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 .main_paragrah {
-  font-size: 12px;
   text-shadow: 
     2px 2px 0 #fff,
     -2px 2px 0 #fff,
     -2px -2px 0 #fff,
     2px -2px 0 #fff;
-  line-height: 12px;
 }
-.main_subtitle {
-  font-size: 18px;
-  line-height: 19px;
+.main_title {
+  text-shadow: 
+    2px 2px 0px hsl(240, 18%, 55%),
+    -2px 2px 0px hsl(240, 18%, 55%),
+    -2px -2px 0px hsl(240, 18%, 55%),
+    2px -2px 0px hsl(240, 18%, 55%);
 }
 
 @font-face {
@@ -42,6 +43,7 @@
   --color-green-yellow: hsl(71.25, 39%, 68%);
   --color-lighter-purple: hsl(240, 50%, 96%);
   --color-light-orange: hsl(22.258, 86%, 86%);
+  --color-blue: hsl(226.744, 100%, 83%);
 
   --font-montserrat: "Montserrat Alternates", 'sans-serif';
 }
@@ -51,6 +53,24 @@
     @apply h-auto absolute -top-14;
   }
   .main_button {
-    @apply size-1/3 absolute left-[90%] top-1/2 rounded-full origin-[-120%_center] border-4 border-white-opacity flex justify-center items-center;
+    @apply size-1/3 absolute left-[90%] top-1/2 rounded-full origin-[-120%_center] border-4 border-white-opacity cursor-pointer;
+  }
+  .main_button-ctr {
+    @apply relative size-full flex justify-center items-center;
+  }
+  .main_button-ctr img {
+    @apply size-2/3;
+  }
+  .main_title {
+    @apply text-white text-[14px] sm:text-[25px] absolute -bottom-1/20;
+  }
+  .main_bitacora-span {
+    @apply absolute left-[85%] top-1/2 w-1/3 h-1/8 border-4 border-white rounded-full origin-[-110%_center];
+  }
+  .main_home-span {
+    @apply absolute left-[85%] top-1/2 w-1/3 h-1/8 border-4 border-white rounded-full origin-[-110%_center];
+  }
+  #main_social img {
+    @apply size-9 sm:size-12;
   }
 }
