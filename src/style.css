@@ -56,7 +56,7 @@
     @apply size-1/3 absolute left-[90%] top-1/2 rounded-full origin-[-120%_center] border-4 border-white-opacity cursor-pointer;
   }
   .main_button-ctr {
-    @apply relative size-full flex justify-center items-center;
+    @apply relative size-full flex justify-center items-center pointer-events-none;
   }
   .main_button-ctr img {
     @apply size-2/3;
@@ -72,5 +72,11 @@
   }
   #main_social img {
     @apply size-9 sm:size-12;
+  }
+  .main_wrapper-avatars {
+    @apply size-[125%] left-1/2 -translate-x-1/2 absolute bottom-0 overflow-hidden rounded-b-full flex justify-center items-center pointer-events-none;
+  }
+  .main_wrapper-avatar {
+    @apply w-3/4 h-auto translate-y-1/7 opacity-0;
   }
 }
