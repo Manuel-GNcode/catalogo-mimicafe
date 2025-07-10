@@ -12,11 +12,16 @@
       <!-- Background -->
       <img src="/images/fondo_estrellas.webp" alt="Background" class="absolute left-0 top-0 w-full h-full object-cover opacity-60">
 
+      <!-- products section -->
+      <div id="main_products" class="absolute left-1/8 top-1/6 border-6 border-lighter-purple w-0 h-100 bg-light-green rounded-[80px] opacity-0">
+
+      </div>
+
       <div id="main_ctr" class="w-1/2 max-w-[400px] min-w-[300px] aspect-1/1 bg-gray rounded-full relative left-1/2 top-1/4 sm:top-1/6 -translate-x-1/2 p-2 text-center sm:p-4 ">
         <!-- Avatars -->
         <div id="main_avatars" class="absolute size-full left-0 top-0">
-          <img src="/images/avatars/personaje_izquierda.webp" alt="Avatar left" id="avatar-left" class="main_avatar w-5/6 left-0 -translate-x-9/10 hidden sm:block">
-          <img src="/images/avatars/personaje_derecha.webp" alt="Avatar right" id="avatar-right" class="main_avatar w-11/10 right-0 translate-x-3/4 hidden sm:block">
+          <img src="/images/avatars/personaje_izquierda.webp" alt="Avatar left" id="avatar-left" class="main_avatar w-5/6 -left-3/4 hidden sm:block">
+          <img src="/images/avatars/personaje_derecha.webp" alt="Avatar right" id="avatar-right" class="main_avatar w-11/10 -right-3/4 hidden sm:block">
         </div>
 
         <!-- food buttons -->
@@ -60,11 +65,11 @@
           </figure>
         </div>
 
-        <img src="/images/avatars/personaje_centro.webp" alt="Avatar top" id="avatar-top" class="main_avatar w-1/2 left-1/2 -translate-x-1/2 -top-0 -translate-y-7/10">
+        <img src="/images/avatars/personaje_centro.webp" alt="Avatar top" id="avatar-top" class="absolute h-auto w-1/2 left-1/2 -translate-x-1/2 -top-2/7">
       </div>
 
       <!-- vertical text -->
-      <div id="main_catalogo" class="absolute left-1/40 -top-4 bg-pastel-viole text-white border-4 border-white rounded-full px-0.5 py-14 flex flex-col items-center text-[14px] sm:text-base">
+      <div id="main_catalogo" class="absolute left-1/40 -top-10 bg-pastel-viole text-white border-4 border-white rounded-full px-0.5 py-18 flex flex-col items-center text-[14px] sm:text-base">
         <p class="-mb-2">C</p>
         <p class="-mb-2">a</p>
         <p class="-mb-2">t</p>
@@ -88,7 +93,7 @@
         </a>
       </div>
 
-      <!-- sections buttons -->
+      <!-- sections circle -->
       <div id="main_bitacora" class="absolute w-1/4 max-w-60 min-w-40 aspect-1/1 bg-violet border-4 border-blue rounded-full -left-1/20 -bottom-1/10 sm:-bottom-1/6">
         <span class="main_bitacora-span bg-pink transform -translate-y-1/2 -rotate-45"></span>
         <span class="main_bitacora-span bg-orange-pink transform -translate-y-1/2 -rotate-15"></span>
@@ -97,6 +102,11 @@
       <div id="main_home" class="absolute w-1/4 max-w-60 min-w-40 aspect-1/1 bg-gray-green border-4 border-green rounded-full -right-1/20 -bottom-1/10 sm:-bottom-1/6" >
         <span class="main_home-span bg-pink transform -translate-y-1/2 -rotate-135"></span>
         <span class="main_home-span bg-orange-pink transform -translate-y-1/2 -rotate-165"></span>
+
+        <button id="main_home-btn" class="size-full rounded-full p-8 cursor-pointer hidden">
+          <img class="w-9/10 h-auto" src="/images/logo_mimicafe.webp" alt="Logo mimicafé">
+          <p class="absolute left-1/2 -translate-x-1/2 bottom-6 main_title">Inicio</p>
+        </button>
       </div>
     </section>
 

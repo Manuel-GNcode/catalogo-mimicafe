@@ -77,6 +77,6 @@
     @apply size-[125%] left-1/2 -translate-x-1/2 absolute bottom-0 overflow-hidden rounded-b-full flex justify-center items-center pointer-events-none;
   }
   .main_wrapper-avatar {
-    @apply w-3/4 h-auto translate-y-1/7 opacity-0;
+    @apply w-3/4 h-auto translate-y-full opacity-0;
   }
 }
