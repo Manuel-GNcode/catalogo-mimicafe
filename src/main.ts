@@ -10,7 +10,7 @@ const avatarLeft = document.getElementById('avatar-left');
 const avatarTop = document.getElementById('avatar-top');
 const avatarRight = document.getElementById('avatar-right');
 
-const currentHover = 0;
+// const currentHover = 0;
 
 const tlHover = gsap.timeline({
   paused:true,
