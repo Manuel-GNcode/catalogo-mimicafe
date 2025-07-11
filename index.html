@@ -7,14 +7,18 @@
     <title>Mimicafe</title>
     <link rel="stylesheet" href="/src/style.css">
   </head>
-  <body class="font-montserrat">
-    <section id="main" class="bg-green h-dvh w-full relative overflow-hidden">
+  <body class="font-montserrat bg-green">
+    <section id="main" class="h-dvh w-full relative overflow-hidden">
       <!-- Background -->
-      <img src="/images/fondo_estrellas.webp" alt="Background" class="absolute left-0 top-0 w-full h-full object-cover opacity-60">
+      <img src="/images/fondo_estrellas.webp" alt="Background" class="absolute left-0 top-0 w-full h-full object-cover opacity-50">
 
       <!-- products section -->
-      <div id="main_products" class="absolute left-1/8 top-1/2 -translate-y-1/2 border-6 border-lighter-purple w-0 h-100 bg-light-green rounded-[80px] opacity-0">
+      <div id="main_products" class="absolute left-1/8 top-1/2 -translate-y-1/2 border-6 border-white w-[0%] h-100 bg-light-green rounded-[80px] opacity-0">
+        <h2 class="main_title hidden bg-white px-8 h-fit py-2 rounded-2xl absolute left-1/2 top-0 -translate-1/2">Nuestras delicias</h2>
 
+        <div id="main_products-items" class="absolute right-0 w-[80%] h-full flex justify-between items-center px-10 pt-10 pb-16">
+
+        </div>
       </div>
 
       <div id="main_ctr" class="w-1/2 max-w-[400px] min-w-[300px] aspect-1/1 bg-gray rounded-full relative left-1/2 top-1/2 -translate-1/2 p-2 text-center sm:p-4 ">
@@ -34,7 +38,7 @@
           </button>
           <button id="button_malteadas" class="main_button transform -translate-y-1/2 rotate-90 bg-light-purple">
             <div class="-rotate-90 main_button-ctr">
-              <img src="/images/icons/icono_malteada.svg" alt="Icono de malteda">
+              <img id="icono-malteada" src="/images/icons/icono_malteada.svg" alt="Icono de malteda">
               <p class="main_title">Malteadas</p>
             </div>
           </button>
