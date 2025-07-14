@@ -60,7 +60,7 @@
 
 @layer components {
   .main_avatar {
-    @apply h-auto absolute -top-14;
+    @apply h-auto absolute -top-14 cursor-pointer;
   }
   .main_button {
     @apply size-1/3 absolute left-[90%] top-1/2 rounded-full origin-[-120%_center] border-4 border-white-opacity cursor-pointer;

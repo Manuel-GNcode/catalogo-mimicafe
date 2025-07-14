@@ -14,7 +14,10 @@
 
       <!-- products section -->
       <div id="main_products" class="absolute left-1/8 top-1/2 -translate-y-1/2 border-6 border-white w-[0%] h-100 bg-light-green rounded-[80px] opacity-0">
-        <h2 class="main_title hidden bg-white px-8 h-fit py-2 rounded-2xl absolute left-1/2 top-0 -translate-1/2">Nuestras delicias</h2>
+        <div id="main_products-title" class="hidden absolute left-1/4 top-0 -translate-y-1/2 gap-2">
+          <h2 class="main_title bg-white px-8 py-2 rounded-2xl relative z-10 w-fit">Nuestras delicias:</h2>
+          <p id="main_products-name" class="px-8 py-2 main_title relative bg-white border-2 border-white-opacity rounded-2xl"></p>
+        </div>
 
         <div id="main_products-items" class="absolute right-0 w-[80%] h-full flex justify-between items-center px-10 pt-10 pb-16">
 
@@ -69,7 +72,7 @@
           </figure>
         </div>
 
-        <img src="/images/avatars/personaje_centro.webp" alt="Avatar top" id="avatar-top" class="absolute h-auto w-1/2 left-1/2 -translate-x-1/2 -top-2/7">
+        <img src="/images/avatars/personaje_centro.webp" alt="Avatar top" id="avatar-top" class="cursor-pointer absolute h-auto w-1/2 left-1/2 -translate-x-1/2 -top-2/7">
       </div>
 
       <!-- vertical text -->
@@ -101,6 +104,10 @@
       <div id="main_bitacora" class="absolute w-1/4 max-w-60 min-w-40 aspect-1/1 bg-violet border-4 border-blue rounded-full -left-[5%] -bottom-[10%]">
         <span class="main_bitacora-span bg-pink transform -translate-y-1/2 -rotate-60"></span>
         <span class="main_bitacora-span bg-orange-pink transform -translate-y-1/2 -rotate-30"></span>
+
+        <button id="main_bitacora-btn" class="size-full rounded-full cursor-pointer hidden">
+          <p class="left-1/2 -translate-x-1/2 top-10 main_title text-[22px]">Bitacora de origen estelar</p>
+        </button>
       </div>
 
       <div id="main_home" class="absolute w-1/4 max-w-60 min-w-40 aspect-1/1 bg-gray-green border-4 border-lighter-purple rounded-full -right-[5%] -bottom-[10%]" >
@@ -109,7 +116,7 @@
 
         <button id="main_home-btn" class="size-full rounded-full p-8 cursor-pointer hidden">
           <img class="w-9/10 h-auto" src="/images/logo_mimicafe.webp" alt="Logo mimicafé">
-          <p class="absolute left-1/2 -translate-x-1/2 bottom-6 main_title">Inicio</p>
+          <p class="left-1/2 -translate-x-1/2 bottom-8 main_title">Inicio</p>
         </button>
       </div>
     </section>
