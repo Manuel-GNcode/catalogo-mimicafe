@@ -5,6 +5,7 @@ import { animationsRotate, tlRotate } from "./assets/animationRotate.ts";
 import { animationsProducts, tlProducts } from "./assets/animationProducts.ts";
 import { playTimeline, reverseAnimations } from "./assets/playReverseTimeline.ts";
 import { renderProducts, mainProductsItems } from "./assets/renderProducts.ts";
+import { animationBitacora, tlBitacora } from "./assets/animationBitacora.ts";
 
 const btnTortas = document.getElementById('button_tortas');
 const btnMalteadas = document.getElementById('button_malteadas');
@@ -77,8 +78,10 @@ const animations = async (newState:number)=>{
     }
   }
   if (currentState != 0) {
-    await tlRotate.reverse();
-    tlRotate.clear();
+    if (currentState == 4) {
+      await reverseAnimations([tlBitacora])
+    }
+    await reverseAnimations([tlRotate]);
 
     renderProducts(newState);
 
@@ -106,14 +109,17 @@ clickMap.forEach(([el, idx])=>{
 
 //botón de home
 mainHomeBtn?.addEventListener('click', ()=>{
+  if (currentState == 4) return;
   if (mainProductsItems) mainProductsItems.innerHTML = '';
   reverseAnimations([tlProducts, tlRotate, tlExitAvatars]);
   currentState = 0;
   asignHoverEvent();
 })
-mainBitacoraBtn?.addEventListener('click', ()=>{
+mainBitacoraBtn?.addEventListener('click', async ()=>{
   if (mainProductsItems) mainProductsItems.innerHTML = '';
-  
+  await reverseAnimations([tlRotate]);
+  animationBitacora();
+  await playTimeline(tlBitacora);
   currentState = 4;
 })
 

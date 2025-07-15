@@ -34,6 +34,14 @@
     -1.5px -1.5px 0px hsl(240, 18%, 55%),
     1.5px -1.5px 0px hsl(240, 18%, 55%);
 }
+.bitacora-text {
+  color: #fff;
+  text-shadow: 
+    1.5px 1.5px 0px hsl(240, 18%, 55%),
+    -1.5px 1.5px 0px hsl(240, 18%, 55%),
+    -1.5px -1.5px 0px hsl(240, 18%, 55%),
+    1.5px -1.5px 0px hsl(240, 18%, 55%);
+}
 
 @font-face {
   font-family: 'Montserrat Alternates';

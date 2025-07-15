@@ -27,9 +27,9 @@ export const animationsProducts = ()=>{
       xPercent: -120,
     }, '<').to('.main_bitacora-span', {
       rotate: '-=90'
-    }, '<').set('#main_home-btn, #main_bitacora-btn', {
+    }, '<').set('#main_home-btn', {
       display: 'block'
-    }).set('#main_products-title', {
+    }).set('#main_products-title, #main_bitacora-btn', {
       display: 'flex'
     })
 }

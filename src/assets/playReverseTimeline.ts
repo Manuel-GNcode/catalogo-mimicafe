@@ -1,5 +1,3 @@
-import gsap from "gsap";
-
 //función asincrona para esperar las animaciones
 export const playTimeline = (timeline:gsap.core.Timeline)=>{
   return new Promise(resolve => {
