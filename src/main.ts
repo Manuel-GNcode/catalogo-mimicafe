@@ -10,7 +10,7 @@ const btnTortas = document.getElementById('button_tortas');
 const btnMalteadas = document.getElementById('button_malteadas');
 const btnHelados = document.getElementById('button_helados');
 const mainHomeBtn = document.getElementById('main_home-btn');
-// const mainProductsItems = document.getElementById('main_products-items');
+const mainBitacoraBtn = document.getElementById('main_bitacora-btn');
 const avatarLeft = document.getElementById('avatar-left');
 const avatarTop = document.getElementById('avatar-top');
 const avatarRight = document.getElementById('avatar-right');
@@ -110,6 +110,11 @@ mainHomeBtn?.addEventListener('click', ()=>{
   reverseAnimations([tlProducts, tlRotate, tlExitAvatars]);
   currentState = 0;
   asignHoverEvent();
+})
+mainBitacoraBtn?.addEventListener('click', ()=>{
+  if (mainProductsItems) mainProductsItems.innerHTML = '';
+  
+  currentState = 4;
 })
 
 window.addEventListener('resize', () => {

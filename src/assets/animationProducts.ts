@@ -9,13 +9,12 @@ export const tlProducts = gsap.timeline({
 })
 export const animationsProducts = ()=>{
   tlProducts.to('#main_ctr', {
-      left: '10%',
-    })
-    .set('#main_products', {
+    left: '10%',
+  }).set('#main_products', {
       opacity: 1,
-    }).to('#main_products', {
+  }).to('#main_products', {
       width: '75%',
-    }, '<')
+  }, '<')
     .to('#main_home', {
       bottom: '110%',
       yPercent: 100,
