@@ -1,11 +1,12 @@
 // import { gsap } from "gsap";
-import { animationHover, clearAnimationHover } from "./assets/animationHoverAvatar.ts";
-import { animationsExitAvatars, tlExitAvatars } from "./assets/animationExitAvatars.ts";
-import { animationsRotate, tlRotate } from "./assets/animationRotate.ts";
-import { animationsProducts, tlProducts } from "./assets/animationProducts.ts";
-import { playTimeline, reverseAnimations } from "./assets/playReverseTimeline.ts";
 import { renderProducts, mainProductsItems } from "./assets/renderProducts.ts";
-import { animationBitacora, tlBitacora } from "./assets/animationBitacora.ts";
+import { asignHoverEvent } from "./assets/functions/asignHoverEvent.ts";
+//Animaciones
+import { tlExitAvatars } from "./assets/animations/animationExitAvatars.ts";
+import { animationsRotate, tlRotate } from "./assets/animations/animationRotate.ts";
+import { tweenLeft, tlHomeTop, tlBitacoraRight } from "./assets/animations/animationMoveCircles.ts";
+import { tlProducts } from "./assets/animations/animationProducts.ts";
+import { tlBitacoraCtr, tlCircleBitacora, tlTextBitacora } from "./assets/animations/animationBitacora.ts";
 
 const btnTortas = document.getElementById('button_tortas');
 const btnMalteadas = document.getElementById('button_malteadas');
@@ -31,66 +32,73 @@ const hoverMap: [HTMLElement | null, number][] = [
   [btnHelados, 3],
 ];
 
-const hoverHandlers = new Map<HTMLElement, { enter: EventListener, leave: EventListener }>();
-
-const asignHoverEvent = () => {
-  hoverMap.forEach(([el, idx]) => {
-    if (!el) return;
-    // Si ya existen handlers, los removemos primero
-    const prev = hoverHandlers.get(el);
-    if (prev) {
-      el.removeEventListener('mouseenter', prev.enter);
-      el.removeEventListener('mouseleave', prev.leave);
-    }
-    // Si es desktop, agregamos y guardamos los nuevos handlers
-    if (isDesktop && currentState==0) {
-      const mouseEnterHandler = () => animationHover(idx);
-      const mouseLeaveHandler = () => clearAnimationHover();
-      el.addEventListener('mouseenter', mouseEnterHandler);
-      el.addEventListener('mouseleave', mouseLeaveHandler);
-      hoverHandlers.set(el, { enter: mouseEnterHandler, leave: mouseLeaveHandler });
-    } else {
-      hoverHandlers.delete(el);
-    }
-  });
-};
-
 document.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth >= 1024) {
     isDesktop = true;
-    asignHoverEvent();
+    asignHoverEvent(hoverMap, isDesktop, currentState);
   }
 });
 
-const animations = async (newState:number)=>{
+const animationHomeToProducts = async (newState:number)=>{
   if (newState == currentState) return;
 
   if (currentState == 0) {
-    animationsExitAvatars();
-    await playTimeline(tlExitAvatars)
+    await tlExitAvatars.play();
     animationsRotate(newState);
-    await playTimeline(tlRotate)
-
-    if (isDesktop) {
-      animationsProducts();
-      await playTimeline(tlProducts)
-      renderProducts(newState);
-    }
-  }
-  if (currentState != 0) {
-    if (currentState == 4) {
-      await reverseAnimations([tlBitacora])
-    }
-    await reverseAnimations([tlRotate]);
-
+    await tlRotate.play();
+    tweenLeft.play();
+    tlHomeTop.play();
+    await tlBitacoraRight.play();
+    await tlProducts.play();
     renderProducts(newState);
-
+  } else {
+    if (currentState == 4) await animationBitacoraToProducts();
+    await tlRotate.reverse();
+    tlRotate.clear();
+    renderProducts(newState);
     animationsRotate(newState);
-    await playTimeline(tlRotate);
+    await tlRotate.play();
   }
 
   currentState = newState;
-  asignHoverEvent();
+  asignHoverEvent(hoverMap, isDesktop, currentState);
+}
+
+const animationProductsToHome = async ()=>{
+  if (mainProductsItems) mainProductsItems.innerHTML = '';
+
+  if (currentState != 4) {
+    await tlProducts.reverse();
+    tlHomeTop.reverse();
+    tweenLeft.reverse();
+    await tlBitacoraRight.reverse();
+    await tlRotate.reverse();
+    tlRotate.clear();
+    await tlExitAvatars.reverse();
+  }
+
+  currentState = 0;
+  asignHoverEvent(hoverMap, isDesktop, currentState);
+}
+
+const animationProductsTobitacora = async ()=>{
+  if (mainProductsItems) mainProductsItems.innerHTML = '';
+
+  await tlProducts.reverse();
+  await tlRotate.reverse();
+  tlRotate.clear();
+  await tlBitacoraCtr.play();
+  tlCircleBitacora.play();
+  tlTextBitacora.play();
+
+  currentState = 4;
+}
+
+const animationBitacoraToProducts = async ()=>{
+  tlTextBitacora.reverse();
+  await tlCircleBitacora.reverse();
+  tlBitacoraCtr.reverse();
+  await tlProducts.play();
 }
 
 //Control de la animación del click
@@ -102,26 +110,14 @@ const clickMap: [HTMLElement | null, number][] = [
   [avatarRight, 3],
   [btnHelados, 3],
 ];
-
 clickMap.forEach(([el, idx])=>{
-  el?.addEventListener('click', ()=> animations(idx));
+  el?.addEventListener('click', ()=> animationHomeToProducts(idx));
 });
 
 //botón de home
-mainHomeBtn?.addEventListener('click', ()=>{
-  if (currentState == 4) return;
-  if (mainProductsItems) mainProductsItems.innerHTML = '';
-  reverseAnimations([tlProducts, tlRotate, tlExitAvatars]);
-  currentState = 0;
-  asignHoverEvent();
-})
-mainBitacoraBtn?.addEventListener('click', async ()=>{
-  if (mainProductsItems) mainProductsItems.innerHTML = '';
-  await reverseAnimations([tlRotate]);
-  animationBitacora();
-  await playTimeline(tlBitacora);
-  currentState = 4;
-})
+mainHomeBtn?.addEventListener('click', animationProductsToHome)
+//botón de bitacora
+mainBitacoraBtn?.addEventListener('click', animationProductsTobitacora)
 
 window.addEventListener('resize', () => {
   const currentWidth = window.innerWidth;
@@ -134,10 +130,9 @@ window.addEventListener('resize', () => {
   }
   if (lastIsDesktop != isDesktop) {
     if (mainProductsItems) mainProductsItems.innerHTML = '';
-    reverseAnimations([tlProducts, tlRotate, tlExitAvatars]);
+    //
     currentState = 0;
-
-    asignHoverEvent();
+    asignHoverEvent(hoverMap, isDesktop, currentState);
   }
 });
 

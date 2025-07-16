@@ -33,10 +33,10 @@ export const renderProducts = (category:number)=>{
     gsap.from('.products_item', {
     opacity: 0,
     x: -100,
-    duration: 0.5,
+    duration: 0.4,
     ease: 'sine.out',
     stagger: {
-      each: 0.5,
+      each: 0.2,
       from: 'end',
       }
     })
