@@ -1,5 +1,21 @@
 import gsap from "gsap";
 
+export const tlCircleHome = gsap.timeline({
+  paused: true,
+  defaults: {
+    duration: 0.4,
+    ease: 'sine.out'
+  }
+})
+tlCircleHome.to('#main_home', {
+  bottom: '-10%',
+  yPercent: 0,
+}).to('.main_home-span', {
+  rotate: '+=90'
+}, 0).set('#main_home-btn', {
+  paddingTop: '0px',
+}, 0)
+
 export const tlCircleBitacora = gsap.timeline({
   paused: true,
   defaults: {

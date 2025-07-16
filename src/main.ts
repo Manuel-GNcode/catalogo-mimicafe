@@ -6,7 +6,7 @@ import { tlExitAvatars } from "./assets/animations/animationExitAvatars.ts";
 import { animationsRotate, tlRotate } from "./assets/animations/animationRotate.ts";
 import { tweenLeft, tlHomeTop, tlBitacoraRight } from "./assets/animations/animationMoveCircles.ts";
 import { tlProducts } from "./assets/animations/animationProducts.ts";
-import { tlBitacoraCtr, tlCircleBitacora, tlTextBitacora } from "./assets/animations/animationBitacora.ts";
+import { tlBitacoraCtr, tlCircleBitacora, tlCircleHome, tlTextBitacora } from "./assets/animations/animationBitacora.ts";
 import { tlBitacoraToHome, tlMainCircleInitial } from "./assets/animations/animationBitacoraToHome.ts";
 
 const btnTortas = document.getElementById('button_tortas');
@@ -87,6 +87,7 @@ const animationProductsTobitacora = async ()=>{
   tlRotate.clear();
   await tlBitacoraCtr.restart();
   tlCircleBitacora.restart();
+  tlCircleHome.restart();
   tlTextBitacora.restart();
 
   currentState = 4;
@@ -94,6 +95,7 @@ const animationProductsTobitacora = async ()=>{
 
 const animationBitacoraToProducts = async (newState:number)=>{
   tlTextBitacora.reverse();
+  tlCircleHome.reverse();
   await tlCircleBitacora.reverse();
   tlBitacoraCtr.reverse();
   await tlProducts.restart();
