@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { productsDatabase } from "./productsDatabase";
+import { productsDatabase } from "../data/productsDatabase";
 
 export const mainProductsItems = document.getElementById('main_products-items');
 const mainProductsName = document.getElementById('main_products-name');

@@ -1,5 +1,5 @@
 // import { gsap } from "gsap";
-import { renderProducts, mainProductsItems } from "./assets/renderProducts.ts";
+import { renderProducts, mainProductsItems } from "./assets/functions/renderProducts.ts";
 import { asignHoverEvent } from "./assets/functions/asignHoverEvent.ts";
 //Animaciones
 import { tlExitAvatars } from "./assets/animations/animationExitAvatars.ts";
@@ -7,6 +7,7 @@ import { animationsRotate, tlRotate } from "./assets/animations/animationRotate.
 import { tweenLeft, tlHomeTop, tlBitacoraRight } from "./assets/animations/animationMoveCircles.ts";
 import { tlProducts } from "./assets/animations/animationProducts.ts";
 import { tlBitacoraCtr, tlCircleBitacora, tlTextBitacora } from "./assets/animations/animationBitacora.ts";
+import { tlBitacoraToHome, tlMainCircleInitial } from "./assets/animations/animationBitacoraToHome.ts";
 
 const btnTortas = document.getElementById('button_tortas');
 const btnMalteadas = document.getElementById('button_malteadas');
@@ -20,7 +21,7 @@ const avatarRight = document.getElementById('avatar-right');
 //Variables globales 
 let isDesktop = false;
 let currentState = 0; //Estado base
-// 1 tortas, 2 malteadas, 3 helados
+// 1 tortas, 2 malteadas, 3 helados, 4 bitacora
 
 //Control de la animación del hover - buscar explicación
 const hoverMap: [HTMLElement | null, number][] = [
@@ -43,21 +44,20 @@ const animationHomeToProducts = async (newState:number)=>{
   if (newState == currentState) return;
 
   if (currentState == 0) {
-    await tlExitAvatars.play();
+    await tlExitAvatars.restart();
     animationsRotate(newState);
-    await tlRotate.play();
-    tweenLeft.play();
-    tlHomeTop.play();
-    await tlBitacoraRight.play();
-    await tlProducts.play();
+    await tlRotate.restart();
+    tweenLeft.restart();
+    tlHomeTop.restart();
+    await tlBitacoraRight.restart();
+    await tlProducts.restart();
     renderProducts(newState);
   } else {
-    if (currentState == 4) await animationBitacoraToProducts();
     await tlRotate.reverse();
     tlRotate.clear();
     renderProducts(newState);
     animationsRotate(newState);
-    await tlRotate.play();
+    await tlRotate.restart();
   }
 
   currentState = newState;
@@ -67,15 +67,13 @@ const animationHomeToProducts = async (newState:number)=>{
 const animationProductsToHome = async ()=>{
   if (mainProductsItems) mainProductsItems.innerHTML = '';
 
-  if (currentState != 4) {
-    await tlProducts.reverse();
-    tlHomeTop.reverse();
-    tweenLeft.reverse();
-    await tlBitacoraRight.reverse();
-    await tlRotate.reverse();
-    tlRotate.clear();
-    await tlExitAvatars.reverse();
-  }
+  await tlProducts.reverse();
+  tlHomeTop.reverse();
+  tweenLeft.reverse();
+  await tlBitacoraRight.reverse();
+  await tlRotate.reverse();
+  tlRotate.clear();
+  await tlExitAvatars.reverse();
 
   currentState = 0;
   asignHoverEvent(hoverMap, isDesktop, currentState);
@@ -87,18 +85,35 @@ const animationProductsTobitacora = async ()=>{
   await tlProducts.reverse();
   await tlRotate.reverse();
   tlRotate.clear();
-  await tlBitacoraCtr.play();
-  tlCircleBitacora.play();
-  tlTextBitacora.play();
+  await tlBitacoraCtr.restart();
+  tlCircleBitacora.restart();
+  tlTextBitacora.restart();
 
   currentState = 4;
 }
 
-const animationBitacoraToProducts = async ()=>{
+const animationBitacoraToProducts = async (newState:number)=>{
   tlTextBitacora.reverse();
   await tlCircleBitacora.reverse();
   tlBitacoraCtr.reverse();
-  await tlProducts.play();
+  await tlProducts.restart();
+  renderProducts(newState);
+  animationsRotate(newState);
+  await tlRotate.restart();
+
+  currentState = newState;
+  console.log(currentState);
+}
+
+const animationBitacoraToHome = async ()=>{
+  tlTextBitacora.reverse();
+  tlHomeTop.reverse();
+  await tlBitacoraToHome.restart();
+  await tlMainCircleInitial.restart();
+  await tlExitAvatars.reverse();
+
+  currentState = 0;
+  asignHoverEvent(hoverMap, isDesktop, currentState);
 }
 
 //Control de la animación del click
@@ -111,11 +126,17 @@ const clickMap: [HTMLElement | null, number][] = [
   [btnHelados, 3],
 ];
 clickMap.forEach(([el, idx])=>{
-  el?.addEventListener('click', ()=> animationHomeToProducts(idx));
+  el?.addEventListener('click', ()=> {
+    if (currentState == 4) animationBitacoraToProducts(idx);
+    else animationHomeToProducts(idx);
+  });
 });
 
 //botón de home
-mainHomeBtn?.addEventListener('click', animationProductsToHome)
+mainHomeBtn?.addEventListener('click', ()=>{
+  if (currentState == 4) animationBitacoraToHome();
+  else animationProductsToHome();
+})
 //botón de bitacora
 mainBitacoraBtn?.addEventListener('click', animationProductsTobitacora)
 

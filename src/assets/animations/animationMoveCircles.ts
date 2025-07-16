@@ -21,7 +21,11 @@ tlHomeTop.to('#main_home', {
   xPercent: -20,
 }).to('.main_home-span', {
   rotate: '-=90'
-}, 0)
+}, 0).set('#main_bitacora-btn', {
+  display: 'flex',
+}).set('#main_home-btn', {
+  display: 'block'
+})
 //Animación circulo bitacora mover derecha
 export const tlBitacoraRight = gsap.timeline({
   paused: true,
@@ -35,8 +39,4 @@ tlBitacoraRight.to('#main_bitacora', {
   xPercent: -120,
 }).to('.main_bitacora-span', {
   rotate: '-=90'
-}, 0).set('#main_bitacora-btn', {
-  display: 'flex',
-}).set('#main_home-btn', {
-  display: 'block'
-}, '<')
+}, 0)
