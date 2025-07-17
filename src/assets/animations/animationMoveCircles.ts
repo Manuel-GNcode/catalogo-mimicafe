@@ -18,14 +18,24 @@ export const tlHomeTop = gsap.timeline({
 tlHomeTop.to('#main_home', {
   bottom: '110%',
   yPercent: 100,
-  xPercent: -20,
 }).to('.main_home-span', {
   rotate: '-=90'
-}, 0).set('#main_bitacora-btn', {
-  display: 'flex',
+}, 0)
+export const tlHomeText = gsap.timeline({
+  paused: true,
+  defaults: {
+    duration: 0.4,
+    ease: 'sine.out',
+  }
+})
+tlHomeText.to('#main_home', {
+  xPercent: -20,
 }).set('#main_home-btn', {
   display: 'block'
+}).set('#main_bitacora-btn', {
+  display: 'flex',
 })
+
 //Animación circulo bitacora mover derecha
 export const tlBitacoraRight = gsap.timeline({
   paused: true,

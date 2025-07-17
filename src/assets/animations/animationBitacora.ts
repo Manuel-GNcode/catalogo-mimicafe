@@ -1,21 +1,5 @@
 import gsap from "gsap";
 
-export const tlCircleHome = gsap.timeline({
-  paused: true,
-  defaults: {
-    duration: 0.4,
-    ease: 'sine.out'
-  }
-})
-tlCircleHome.to('#main_home', {
-  bottom: '-10%',
-  yPercent: 0,
-}).to('.main_home-span', {
-  rotate: '+=90'
-}, 0).set('#main_home-btn', {
-  paddingTop: '0px',
-}, 0)
-
 export const tlCircleBitacora = gsap.timeline({
   paused: true,
   defaults: {
@@ -30,6 +14,12 @@ tlCircleBitacora.to('#main_bitacora', {
   yPercent: 50,
   width: '450px',
   maxWidth: '450px', 
+}).set('.inner_orbit-left, .inner_orbit-right', {
+  display: 'block',
+}).from('.inner_orbit-left, .inner_orbit-right', {
+  width: '150%',
+  height: '150%',
+  autoAlpha: 0,
 })
 export const tlTextBitacora = gsap.timeline({
   paused: true,
@@ -49,6 +39,9 @@ tlTextBitacora.set('#main_direction', {
   paddingRight: '70px',
 }, 0).set('.bitacora-text', {
   display: 'block'
+}).set('#main_home-btn', {
+  paddingTop: '0px',
+  paddingBottom: '28px'
 })
 
 export const tlBitacoraCtr = gsap.timeline({

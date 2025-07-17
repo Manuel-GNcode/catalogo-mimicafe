@@ -125,7 +125,7 @@
       </div>
 
       <!-- sections circle -->
-      <div id="main_bitacora" class="absolute w-1/4 max-w-60 min-w-40 aspect-1/1 bg-violet border-4 border-white rounded-full -left-[5%] -bottom-[10%]">
+      <div id="main_bitacora" class="absolute w-1/4 max-w-60 min-w-40 aspect-1/1 bg-violet border-4 border-white rounded-full -left-[5%] -bottom-[10%] transform-3d">
         <span class="main_bitacora-span bg-pink transform -translate-y-1/2 -rotate-60"></span>
         <span class="main_bitacora-span bg-orange-pink transform -translate-y-1/2 -rotate-30"></span>
 
@@ -134,13 +134,23 @@
           <p class="bitacora-text hidden text-[14px]/4">En nuestro viaje a la luna, descubrimos que una tacita de café combina con todo: Desde una lluvia de estrellas hasta la rebelión de las chicas mágicas.</p>
           <p class="bitacora-text hidden text-[14px]/4">Así nació nuestra pastelería intergaláctica, un rincón donde horneamos dulces con polvo de cometa, glaseamos con rayos de aurora y servimos cada creación con una sonrisa y, por supuesto, una buena taza de café estelar.</p>
         </button>
+
+        <div class="hidden inner_orbit-left transform-3d w-[140%] h-[140%] absolute top-1/2 left-1/2 rounded-full border-6 border-purple pointer-events-none">
+          <span class="absolute w-1/16 aspect-square top-0 left-1/2 -translate-1/2 bg-violet border-4 border-white rounded-full"></span>
+          <span class="absolute w-1/16 aspect-square bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-violet border-4 border-white rounded-full"></span>
+        </div>
+
+        <div class="hidden inner_orbit-right transform-3d w-[140%] h-[140%] absolute top-1/2 left-1/2 rounded-full border-6 border-purple pointer-events-none">
+          <span class="absolute w-1/16 aspect-square top-0 left-1/2 -translate-1/2 bg-violet border-4 border-white rounded-full"></span>
+          <span class="absolute w-1/16 aspect-square bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-violet border-4 border-white rounded-full"></span>
+        </div>
       </div>
 
       <div id="main_home" class="absolute w-1/4 max-w-60 min-w-40 aspect-1/1 bg-gray-green border-4 border-lighter-purple rounded-full -right-[5%] -bottom-[10%]" >
         <span class="main_home-span bg-pink transform -translate-y-1/2 -rotate-120"></span>
         <span class="main_home-span bg-orange-pink transform -translate-y-1/2 -rotate-150"></span>
 
-        <button id="main_home-btn" class="size-full rounded-full p-6 pt-10 cursor-pointer hidden">
+        <button id="main_home-btn" class="size-full rounded-full px-10 pt-8 cursor-pointer hidden">
           <img class="w-full h-auto object-cover" src="/images/logo_mimicafe.webp" alt="Logo mimicafé">
         </button>
       </div>

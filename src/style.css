@@ -42,6 +42,24 @@
     -1.5px -1.5px 0px hsl(240, 18%, 55%),
     1.5px -1.5px 0px hsl(240, 18%, 55%);
 }
+.inner_orbit-left {
+  transform: translate(-50%, -50%) rotateX(50deg) rotateY(15deg) rotateZ(0deg);
+  animation: spinLeft 6s linear infinite;
+}
+@keyframes spinLeft {
+  to {
+    transform: translate(-50%, -50%) rotateX(50deg) rotateY(15deg) rotateZ(360deg);
+  }
+}
+.inner_orbit-right {
+  transform: translate(-50%, -50%) rotateX(50deg) rotateY(-15deg) rotateZ(0deg);
+  animation: spinRight 6s linear infinite;
+}
+@keyframes spinRight {
+  to {
+    transform: translate(-50%, -50%) rotateX(50deg) rotateY(-15deg) rotateZ(-360deg);
+  }
+}
 
 @font-face {
   font-family: 'Montserrat Alternates';

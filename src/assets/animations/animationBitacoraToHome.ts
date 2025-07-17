@@ -16,7 +16,9 @@ tlBitacoraToHome.to('#main_bitacora', {
   maxWidth: '240px', 
 }).to('.main_bitacora-span', {
   rotate: '+=90'
-}, 0)
+}, 0).set('.inner_orbit-left, .inner_orbit-right', {
+  display: 'none',
+})
 
 export const tlMainCircleInitial = gsap.timeline({
   paused: true,

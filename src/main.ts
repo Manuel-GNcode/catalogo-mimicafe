@@ -4,9 +4,9 @@ import { asignHoverEvent } from "./assets/functions/asignHoverEvent.ts";
 //Animaciones
 import { tlExitAvatars } from "./assets/animations/animationExitAvatars.ts";
 import { animationsRotate, tlRotate } from "./assets/animations/animationRotate.ts";
-import { tweenLeft, tlHomeTop, tlBitacoraRight } from "./assets/animations/animationMoveCircles.ts";
+import { tweenLeft, tlHomeTop, tlBitacoraRight, tlHomeText } from "./assets/animations/animationMoveCircles.ts";
 import { tlProducts } from "./assets/animations/animationProducts.ts";
-import { tlBitacoraCtr, tlCircleBitacora, tlCircleHome, tlTextBitacora } from "./assets/animations/animationBitacora.ts";
+import { tlBitacoraCtr, tlCircleBitacora, tlTextBitacora } from "./assets/animations/animationBitacora.ts";
 import { tlBitacoraToHome, tlMainCircleInitial } from "./assets/animations/animationBitacoraToHome.ts";
 
 const btnTortas = document.getElementById('button_tortas');
@@ -49,6 +49,7 @@ const animationHomeToProducts = async (newState:number)=>{
     await tlRotate.restart();
     tweenLeft.restart();
     tlHomeTop.restart();
+    tlHomeText.restart();
     await tlBitacoraRight.restart();
     await tlProducts.restart();
     renderProducts(newState);
@@ -68,6 +69,7 @@ const animationProductsToHome = async ()=>{
   if (mainProductsItems) mainProductsItems.innerHTML = '';
 
   await tlProducts.reverse();
+  tlHomeText.reverse();
   tlHomeTop.reverse();
   tweenLeft.reverse();
   await tlBitacoraRight.reverse();
@@ -87,7 +89,7 @@ const animationProductsTobitacora = async ()=>{
   tlRotate.clear();
   await tlBitacoraCtr.restart();
   tlCircleBitacora.restart();
-  tlCircleHome.restart();
+  tlHomeTop.reverse();
   tlTextBitacora.restart();
 
   currentState = 4;
@@ -95,7 +97,7 @@ const animationProductsTobitacora = async ()=>{
 
 const animationBitacoraToProducts = async (newState:number)=>{
   tlTextBitacora.reverse();
-  tlCircleHome.reverse();
+  tlHomeTop.restart();
   await tlCircleBitacora.reverse();
   tlBitacoraCtr.reverse();
   await tlProducts.restart();
@@ -104,12 +106,11 @@ const animationBitacoraToProducts = async (newState:number)=>{
   await tlRotate.restart();
 
   currentState = newState;
-  console.log(currentState);
 }
 
 const animationBitacoraToHome = async ()=>{
   tlTextBitacora.reverse();
-  tlHomeTop.reverse();
+  tlHomeText.reverse();
   await tlBitacoraToHome.restart();
   await tlMainCircleInitial.restart();
   await tlExitAvatars.reverse();
@@ -129,15 +130,23 @@ const clickMap: [HTMLElement | null, number][] = [
 ];
 clickMap.forEach(([el, idx])=>{
   el?.addEventListener('click', ()=> {
-    if (currentState == 4) animationBitacoraToProducts(idx);
-    else animationHomeToProducts(idx);
+    if (isDesktop) {
+      if (currentState == 4) animationBitacoraToProducts(idx);
+      else animationHomeToProducts(idx);
+    } else {
+      console.log('working in Mobile')
+    }
   });
 });
 
 //botón de home
 mainHomeBtn?.addEventListener('click', ()=>{
-  if (currentState == 4) animationBitacoraToHome();
-  else animationProductsToHome();
+  if (isDesktop) {
+    if (currentState == 4) animationBitacoraToHome();
+    else animationProductsToHome();
+  } else {
+    console.log('working in Mobile')
+  }
 })
 //botón de bitacora
 mainBitacoraBtn?.addEventListener('click', animationProductsTobitacora)
@@ -152,10 +161,13 @@ window.addEventListener('resize', () => {
     isDesktop = false;
   }
   if (lastIsDesktop != isDesktop) {
-    if (mainProductsItems) mainProductsItems.innerHTML = '';
-    //
-    currentState = 0;
-    asignHoverEvent(hoverMap, isDesktop, currentState);
+    if (currentState == 0) {
+      asignHoverEvent(hoverMap, isDesktop, currentState);
+    } else if (currentState < 4) {
+      animationProductsToHome();
+    } else {
+      animationBitacoraToHome();
+    }
   }
 });
 
