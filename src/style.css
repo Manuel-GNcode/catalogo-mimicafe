@@ -61,6 +61,37 @@
   }
 }
 
+.btn-effect-wp {
+  border-radius: 10px;
+  box-shadow: 0 4px 0 rgba(193, 205, 142, 1);
+  transition: all 0.1s ease-out;
+}
+.btn-effect-wp:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(193, 205, 142, 1);
+  filter: brightness(0.9);
+}
+.btn-effect-yt {
+  border-radius: 10px;
+  box-shadow: 0 4px 0 hsl(339, 68%, 71%);
+  transition: all 0.1s ease-out;
+}
+.btn-effect-yt:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 hsl(339, 68%, 71%);
+  filter: brightness(0.9);
+}
+.btn-effect-ig {
+  border-radius: 10px;
+  box-shadow: 0 4px 0 hsl(328, 46%, 74%);
+  transition: all 0.1s ease-out;
+}
+.btn-effect-ig:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 hsl(328, 46%, 74%);
+  filter: brightness(0.9);
+}
+
 @font-face {
   font-family: 'Montserrat Alternates';
   src: url('/fonts/MontserratAlternates-Bold.ttf') format('truetype');
