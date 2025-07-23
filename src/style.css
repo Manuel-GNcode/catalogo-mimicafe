@@ -159,4 +159,59 @@
   .products_item {
     @apply relative border-6 border-light-orange bg-lighter-purple h-full rounded-[20px] flex-1 max-w-[33%];
   }
+  /* Estilos para mobile */
+  .article_avatar {
+    @apply w-60 aspect-square absolute left-0 top-0 -translate-y-1/2 -translate-x-1/3;
+  }
+  .article_avatar-text {
+    @apply absolute -z-1 right-0 top-1/2 translate-x-full -translate-y-1/2;
+  }
+  .article_avatar-text-title {
+    @apply px-8 py-1 w-fit rounded-tr-2xl;
+  }
+  .article_avatar-text-p {
+    @apply bg-white px-8 py-2 rounded-r-2xl;
+  }
+  .article_avatar-ctr {
+    @apply size-full bg-purple rounded-full translate-x-2 p-2;
+  }
+  .article_avatar-ctr-icon {
+    @apply absolute right-0 top-0 -translate-y-1/4 translate-x-1/4 w-1/3 aspect-square rounded-full border-4 border-white-opacity p-3;
+  }
+  .article_avatar-ctr-img {
+    @apply relative size-full bg-gradient-to-b from-dark-pink to-yellow rounded-full;
+  }
+  .mobile_catalogo {
+    @apply px-10 py-32 flex flex-col gap-14 bg-light-green rounded-r-[70px] border-4 border-white;
+  }
+  .mobile_catalogo-product {
+    @apply relative border-4 border-white-opacity h-60 rounded-xl;
+  }
+  .mobile_catalogo-a {
+    @apply absolute w-25 h-25 rounded-full p-6 border-4 border-white-opacity bottom-0 left-0 translate-y-1/2;
+  }
+  .mobile_catalogo-bitacora {
+    @apply w-45 h-45 rounded-full bg-violet absolute right-0 bottom-0 translate-x-1/4 translate-y-3/4 grid place-content-center text-center p-4 border-4 border-white;
+  }
+  .mobile_catalogo-bitacora-span {
+    @apply absolute w-1/3 h-5 rounded-xl right-0 top-1/2 -translate-y-1/2 translate-x-[50%] origin-[-100%_center] border-4 border-white;
+  }
+}
+.mobile-title {
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 
+    2px 2px 0px hsl(240, 18%, 55%),
+    -2px 2px 0px hsl(240, 18%, 55%),
+    -2px -2px 0px hsl(240, 18%, 55%),
+    2px -2px 0px hsl(240, 18%, 55%);
+}
+.mobile-text {
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 
+    1.5px 1.5px 0px hsl(240, 18%, 55%),
+    -1.5px 1.5px 0px hsl(240, 18%, 55%),
+    -1.5px -1.5px 0px hsl(240, 18%, 55%),
+    1.5px -1.5px 0px hsl(240, 18%, 55%);
 }
