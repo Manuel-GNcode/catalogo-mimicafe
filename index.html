@@ -38,18 +38,21 @@
               <img src="/images/icons/icono_torta.svg" alt="Icono de torta">
               <p class="border-white-gray main_buttons-paragrah">Tortas</p>
             </div>
+            <a href="#mobile_tortas" class="absolute left-0 top-0 size-full lg:hidden"></a>
           </button>
           <button id="button_malteadas" class="main_button transform -translate-y-1/2 rotate-90 bg-light-purple">
             <div class="-rotate-90 main_button-ctr">
               <img id="icono-malteada" src="/images/icons/icono_malteada.svg" alt="Icono de malteda">
               <p class="border-white-gray main_buttons-paragrah">Malteadas</p>
             </div>
+            <a href="#mobile_malteadas" class="absolute left-0 top-0 size-full lg:hidden"></a>
           </button>
           <button id="button_helados" class="main_button transform -translate-y-1/2 rotate-40 bg-green-yellow">
             <div class="-rotate-40 main_button-ctr">
               <img src="/images/icons/icono_helado.svg" alt="Icono de helado">
               <p class="border-white-gray main_buttons-paragrah">Helados</p>
             </div>
+            <a href="#mobile_helados" class="absolute left-0 top-0 size-full lg:hidden"></a>
           </button>
         </div>
         
@@ -72,7 +75,7 @@
           </figure>
         </div>
 
-        <img src="/images/avatars/personaje_centro.webp" alt="Avatar top" id="avatar-top" class="cursor-pointer absolute h-auto w-1/2 left-1/2 -translate-x-1/2 -top-2/7">
+        <img src="/images/avatars/personaje_centro.webp" alt="Avatar top" id="avatar-top" class="cursor-pointer absolute h-auto w-1/2 left-1/2 -translate-x-1/2 -top-2/7 pointer-events-none lg:pointer-events-auto">
       </div>
 
       <!-- vertical text -->
@@ -157,8 +160,9 @@
     </section>
 
     <!-- Mobile section -->
-    <section id="mobile" class="lg:hidden px-10 overflow-hidden">
-      <article id="mobile_tortas" class="relative mt-70">
+    <section id="mobile" class="relative px-8 overflow-x-clip lg:hidden">
+      <div class="absolute opacity-40 left-0 top-0 size-full bg-[url('/images/fondo_estrellas.webp')] bg-auto"></div>
+      <article id="mobile_tortas" class="relative mt-20 pt-40 max-w-150 mx-auto">
         <!-- muñeca -->
         <div class="article_avatar">
           <span class="article_avatar-text">
@@ -178,16 +182,7 @@
           </div>
         </div>
 
-        <div id="mobile_tortas-catalogo" class="mobile_catalogo">
-          <div class="mobile_catalogo-product bg-orange">
-            <img src="/images/productos/tortas/citrico_cosmico.webp" alt="Delicia 1" class="size-full object-cover rounded-[10px]">
-
-            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-3/4">
-              <p class="mobile-title bg-white px-10 py-1 whitespace-nowrap rounded-xl">Una delicia</p>
-              <p class="mobile-text bg-gray w-fit px-8 mx-auto rounded-b-xl">$5.000</p>
-            </span>
-          </div>
-        </div>
+        <div id="mobile_tortas-catalogo" class="mobile_catalogo"></div>
 
         <a href="#mobile_malteadas" class="mobile_catalogo-a bg-pastel-viole">
           <img class="size-full" src="/images/icons/icono_malteada.svg" alt="Icono de malteadas">
@@ -205,7 +200,7 @@
 
       </article>
 
-      <article id="mobile_malteadas" class="relative mt-70">
+      <article id="mobile_malteadas" class="relative mt-35 pt-40 max-w-150 mx-auto">
         <!-- muñeca -->
         <div class="article_avatar">
           <span class="article_avatar-text">
@@ -225,19 +220,10 @@
           </div>
         </div>
 
-        <div id="mobile_tortas-catalogo" class="mobile_catalogo">
-          <div class="mobile_catalogo-product bg-pastel-viole  ">
-            <img src="/images/productos/tortas/citrico_cosmico.webp" alt="Delicia 1" class="size-full object-cover rounded-[10px]">
-
-            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-3/4">
-              <p class="mobile-title bg-white px-10 py-1 whitespace-nowrap rounded-xl">Una delicia</p>
-              <p class="mobile-text bg-gray w-fit px-8 mx-auto rounded-b-xl">$5.000</p>
-            </span>
-          </div>
-        </div>
+        <div id="mobile_malteadas-catalogo" class="mobile_catalogo"></div>
 
         <a href="#mobile_tortas" class="mobile_catalogo-a bg-orange">
-          <img class="size-full" src="/images/icons/icono_malteada.svg" alt="Icono de malteadas">
+          <img class="size-full" src="/images/icons/icono_torta.svg" alt="Icono de malteadas">
           <p class="mobile-text absolute bottom-0 left-1/2 -translate-x-1/2">Tortas</p>
         </a>
         <a href="#mobile_helados" class="mobile_catalogo-a bg-green-yellow translate-x-[110%]">
@@ -251,7 +237,46 @@
         </a>
 
       </article>
-      <article id="mobile_bitacora" class="min-h-dvh"></article>
+
+      <article id="mobile_helados" class="relative mt-35 pt-40 max-w-150 mx-auto">
+        <!-- muñeca -->
+        <div class="article_avatar">
+          <span class="article_avatar-text">
+            <p class="mobile-title bg-green-yellow article_avatar-text-title">Helados</p>
+            <p class="mobile-text article_avatar-text-p">Nuestras delicias</p>
+          </span>
+          <div class="article_avatar-ctr">
+            <div class="article_avatar-ctr-icon bg-green-yellow">
+              <img src="/images/icons/icono_helado.svg" alt="logo de helados">
+            </div>
+
+            <div class="article_avatar-ctr-img">
+              <figure class="size-full overflow-hidden rounded-full">
+                <img class="w-3/4 h-auto translate-x-10" src="/images/avatars/personaje_helado.webp" alt="Avatar de los helados">
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div id="mobile_helados-catalogo" class="mobile_catalogo"></div>
+
+        <a href="#mobile_tortas" class="mobile_catalogo-a bg-orange">
+          <img class="size-full" src="/images/icons/icono_torta.svg" alt="Icono de malteadas">
+          <p class="mobile-text absolute bottom-0 left-1/2 -translate-x-1/2">Tortas</p>
+        </a>
+        <a href="#mobile_malteadas" class="mobile_catalogo-a bg-pastel-viole translate-x-[110%]">
+          <img class="size-full" src="/images/icons/icono_malteada.svg" alt="Icono de malteadas">
+          <p class="mobile-text absolute bottom-0 left-1/2 -translate-x-1/2">Malteadas</p>
+        </a>
+        <a href="#mobile_bitacora" class="mobile_catalogo-bitacora">
+          <p class="mobile-text text-[16px]/5">Bitácora de origen estelar</p>
+          <span class="mobile_catalogo-bitacora-span rotate-210 bg-orange"></span>
+          <span class="mobile_catalogo-bitacora-span rotate-240 bg-dark-pink"></span>
+        </a>
+
+      </article>
+
+      <article id="mobile_bitacora" class="border min-h-dvh mt-35 pt-40"></article>
     </section>
 
     <script type="module" src="/src/main.ts"></script>

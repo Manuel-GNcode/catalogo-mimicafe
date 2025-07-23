@@ -8,6 +8,8 @@ import { tweenLeft, tlHomeTop, tlBitacoraRight, tlHomeText } from "./assets/anim
 import { tlProducts } from "./assets/animations/animationProducts.ts";
 import { tlBitacoraCtr, tlCircleBitacora, tlTextBitacora } from "./assets/animations/animationBitacora.ts";
 import { tlBitacoraToHome, tlMainCircleInitial } from "./assets/animations/animationBitacoraToHome.ts";
+//función de renderizado mobile
+import { renderMobileCatalogo } from "./assets/functions/renderMobileProducts.ts";
 
 const btnTortas = document.getElementById('button_tortas');
 const btnMalteadas = document.getElementById('button_malteadas');
@@ -37,6 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth >= 1024) {
     isDesktop = true;
     asignHoverEvent(hoverMap, isDesktop, currentState);
+  } else {
+    renderMobileCatalogo();
   }
 });
 
@@ -130,12 +134,9 @@ const clickMap: [HTMLElement | null, number][] = [
 ];
 clickMap.forEach(([el, idx])=>{
   el?.addEventListener('click', ()=> {
-    if (isDesktop) {
-      if (currentState == 4) animationBitacoraToProducts(idx);
-      else animationHomeToProducts(idx);
-    } else {
-      console.log('working in Mobile')
-    }
+    if (!isDesktop) return;
+    if (currentState == 4) animationBitacoraToProducts(idx);
+    else animationHomeToProducts(idx);
   });
 });
 
