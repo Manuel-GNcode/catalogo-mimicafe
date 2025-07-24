@@ -162,6 +162,7 @@
     <!-- Mobile section -->
     <section id="mobile" class="relative px-8 overflow-x-clip lg:hidden">
       <div class="absolute opacity-40 left-0 top-0 size-full bg-[url('/images/fondo_estrellas.webp')] bg-auto"></div>
+      
       <article id="mobile_tortas" class="relative mt-20 pt-40 max-w-150 mx-auto">
         <!-- muñeca -->
         <div class="article_avatar">
@@ -276,7 +277,49 @@
 
       </article>
 
-      <article id="mobile_bitacora" class="border min-h-dvh mt-35 pt-40"></article>
+      <article id="mobile_bitacora" class="relative border mt-35 pt-50">
+        <div class="article_avatar top-[120px] -translate-x-1/2">
+          <div class="article_avatar-ctr">
+            <div class="article_avatar-ctr-icon bg-green-yellow top-1/2 translate-x-1/2 -translate-y-1/2 -right-1/20">
+              <img src="/images/icons/icono_helado.svg" alt="logo de helados">
+            </div>
+            <div class="article_avatar-ctr-icon bg-orange top-[105%] -translate-y-1/2 translate-x-1/2 right-1/2">
+              <img src="/images/icons/icono_torta.svg" alt="logo de helados">
+            </div>
+
+            <div class="article_avatar-ctr-icon bg-pastel-viole top-full right-0 translate-x-1/6 -translate-y-2/3">
+              <img src="/images/icons/icono_malteada.svg" alt="logo de helados">
+            </div>
+
+            <div class="article_avatar-ctr-img grid place-content-center">
+              <p class="mobile-text">texto aquí</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-10 sm:px-20 flex flex-col gap-8 items-center text-center">
+          <div class="w-50 aspect-square bg-violet rounded-full grid place-content-center">
+            <p class="mobile-title">Bitácora de origen estelar</p>
+          </div>
+
+          <div>
+            <p class="mobile-text text-[14px]/5 mb-4">En nuestro viaje a la luna, descubrimos que una tacita de café combina con todo: Desde una lluvia de estrellas hasta la rebelión de las chicas mágicas.</p>
+            <p class="mobile-text text-[14px]/5 ">Así nació nuestra pastelería intergaláctica, un rincón donde horneamos dulces con polvo de cometa, glaseamos con rayos de aurora y servimos cada creación con una sonrisa y, por supuesto, una buena taza de café estelar</p>
+          </div>
+        </div>
+
+        <div id="mobile_social" class="absolute right-0 top-15 translate-x-1/3 bg-white-opacity border-4 border-white py-4 px-2 rounded-2xl flex flex-col gap-2">
+          <a href="#" class="btn-effect-wp">
+            <img src="/images/icons/icono_whatsapp.svg" alt="Icono de Whatsapp">
+          </a>
+          <a href="#" class="btn-effect-yt">
+            <img src="/images/icons/icono_youtube.svg" alt="Icono de Youtube">
+          </a>
+          <a href="#" class="btn-effect-ig">
+            <img src="/images/icons/icono_instagram.svg" alt="Icono de Instagram">
+          </a>
+        </div>
+      </article>
     </section>
 
     <script type="module" src="/src/main.ts"></script>

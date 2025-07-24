@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     isDesktop = true;
     asignHoverEvent(hoverMap, isDesktop, currentState);
   } else {
-    renderMobileCatalogo();
+    // renderMobileCatalogo();
   }
 });
 
@@ -162,6 +162,7 @@ window.addEventListener('resize', () => {
     isDesktop = false;
   }
   if (lastIsDesktop != isDesktop) {
+    // renderMobileCatalogo();
     if (currentState == 0) {
       asignHoverEvent(hoverMap, isDesktop, currentState);
     } else if (currentState < 4) {

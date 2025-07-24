@@ -23,6 +23,7 @@ export const renderMobileCatalogo = () => {
     }
 
     if (product) {
+      product.innerHTML = '';
       currentData.forEach(item => {
         const newProductHTML = `
         <div class="mobile_catalogo-product ${currentColor} ">
