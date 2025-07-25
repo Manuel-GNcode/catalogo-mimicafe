@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mimicafe</title>
+    <title>Mimicafé</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="/src/style.css" />
+
+    <meta name="description" content="Catalogo con los mejores postres estelares" />
+    <meta name="keywords" content="catalogo, respostería, compras, ventas, dulces, estelar, espacio, delicioso" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://catalogo-mimicafe.vercel.app/" />
+    <meta property="og:title" content="Mimicafé" />
+    <meta property="og:description" content="Catalogo con los mejores postres estelares" />
+    <meta property="og:image" content="https://catalogo-mimicafe.vercel.app/og.webp" />
+    <meta property="og:locale" content="es_ES" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="catalogo-mimicafe.vercel.app" />
+    <meta property="twitter:url" content="https://catalogo-mimicafe.vercel.app/" />
+    <meta name="twitter:title" content="Catalogo mimicafé" />
+    <meta name="twitter:description" content="Catalogo con los mejores postres estelares" />
+    <meta name="twitter:image" content="https://catalogo-mimicafe.vercel.app/new_og.webp" />
   </head>
   <body class="font-montserrat bg-green">
     <section
@@ -315,14 +332,32 @@
     </section>
 
     <!-- Mobile section -->
-    <section id="mobile" class="relative px-8 overflow-hidden lg:hidden">
-      <div
-        class="absolute opacity-40 left-0 top-0 size-full bg-[url('/images/fondo_estrellas.webp')] bg-auto"
-      ></div>
+    <section id="mobile" class="relative px-12 overflow-hidden lg:hidden">
+      <div class="absolute opacity-40 left-0 top-0 size-full bg-[url('/images/fondo_estrellas.webp')] bg-auto"></div>
+      <!-- navbar -->
+      <div id="navbar" class="absolute z-50 w-35 top-0 right-0 p-4 flex flex-col items-end gap-2 sm:w-40">
+        <a href="#mobile_tortas" class="bg-orange mobile_catalogo-a">
+          <img class="size-full" src="/images/icons/icono_torta.svg" alt="Icono de malteadas"/>
+        </a>
+
+        <a href="#mobile_malteadas" class="bg-pastel-viole mobile_catalogo-a">
+          <img class="size-full" src="/images/icons/icono_malteada.svg" alt="Icono de malteadas"/>
+        </a>
+
+        <a href="#mobile_helados" class="bg-green-yellow mobile_catalogo-a">
+          <img class="size-full" src="/images/icons/icono_helado.svg" alt="Icono de malteadas"/>
+        </a>
+
+        <a href="#mobile_bitacora" class="bg-violet w-full aspect-square rounded-full grid place-content-center p-2 border-4 border-white relative">
+          <p class="mobile-text text-[12px] text-center sm:text-base">Bitácora estelar</p>
+          <div class="mobile_catalogo-span rotate-210 bg-orange"></div>
+          <div class="mobile_catalogo-span rotate-240 bg-dark-pink"></div>
+        </a>
+      </div>
 
       <article
         id="mobile_tortas"
-        class="relative mt-20 pt-30 max-w-150 mx-auto sm:pt-38"
+        class="relative mt-25 pt-25 max-w-150 mx-auto sm:pt-38"
       >
         <!-- muñeca -->
         <div class="article_avatar">
@@ -350,44 +385,9 @@
         </div>
 
         <div id="mobile_tortas-catalogo" class="mobile_catalogo"></div>
-
-        <a href="#mobile_malteadas" class="mobile_catalogo-a bg-pastel-viole">
-          <img
-            class="size-full"
-            src="/images/icons/icono_malteada.svg"
-            alt="Icono de malteadas"
-          />
-          <p class="mobile-text absolute bottom-0 left-1/2 -translate-x-1/2">
-            Malteadas
-          </p>
-        </a>
-        <a
-          href="#mobile_helados"
-          class="mobile_catalogo-a bg-green-yellow translate-x-[110%]"
-        >
-          <img
-            class="size-full"
-            src="/images/icons/icono_helado.svg"
-            alt="Icono de malteadas"
-          />
-          <p class="mobile-text absolute bottom-0 left-1/2 -translate-x-1/2">
-            Helados
-          </p>
-        </a>
-        <a href="#mobile_bitacora" class="mobile_catalogo-bitacora">
-          <p class="mobile-text text-[16px]/5">Bitácora de origen estelar</p>
-          <span
-            class="mobile_catalogo-bitacora-span rotate-210 bg-orange"
-          ></span>
-          <span
-            class="mobile_catalogo-bitacora-span rotate-240 bg-dark-pink"
-          ></span>
-        </a>
       </article>
 
-      <article
-        id="mobile_malteadas"
-        class="relative mt-20 pt-30 max-w-150 mx-auto sm:pt-38"
+      <article id="mobile_malteadas" class="relative mt-10 pt-30 max-w-150 mx-auto sm:pt-38"
       >
         <!-- muñeca -->
         <div class="article_avatar">
@@ -418,44 +418,11 @@
         </div>
 
         <div id="mobile_malteadas-catalogo" class="mobile_catalogo"></div>
-
-        <a href="#mobile_tortas" class="mobile_catalogo-a bg-orange">
-          <img
-            class="size-full"
-            src="/images/icons/icono_torta.svg"
-            alt="Icono de malteadas"
-          />
-          <p class="mobile-text absolute bottom-0 left-1/2 -translate-x-1/2">
-            Tortas
-          </p>
-        </a>
-        <a
-          href="#mobile_helados"
-          class="mobile_catalogo-a bg-green-yellow translate-x-[110%]"
-        >
-          <img
-            class="size-full"
-            src="/images/icons/icono_helado.svg"
-            alt="Icono de malteadas"
-          />
-          <p class="mobile-text absolute bottom-0 left-1/2 -translate-x-1/2">
-            Helados
-          </p>
-        </a>
-        <a href="#mobile_bitacora" class="mobile_catalogo-bitacora">
-          <p class="mobile-text text-[16px]/5">Bitácora de origen estelar</p>
-          <span
-            class="mobile_catalogo-bitacora-span rotate-210 bg-orange"
-          ></span>
-          <span
-            class="mobile_catalogo-bitacora-span rotate-240 bg-dark-pink"
-          ></span>
-        </a>
       </article>
 
       <article
         id="mobile_helados"
-        class="relative mt-20 pt-30 max-w-150 mx-auto sm:pt-38"
+        class="relative mt-10 pt-30 max-w-150 mx-auto sm:pt-38"
       >
         <!-- muñeca -->
         <div class="article_avatar">
@@ -484,38 +451,6 @@
 
         <div id="mobile_helados-catalogo" class="mobile_catalogo"></div>
 
-        <a href="#mobile_tortas" class="mobile_catalogo-a bg-orange">
-          <img
-            class="size-full"
-            src="/images/icons/icono_torta.svg"
-            alt="Icono de malteadas"
-          />
-          <p class="mobile-text absolute bottom-0 left-1/2 -translate-x-1/2">
-            Tortas
-          </p>
-        </a>
-        <a
-          href="#mobile_malteadas"
-          class="mobile_catalogo-a bg-pastel-viole translate-x-[110%]"
-        >
-          <img
-            class="size-full"
-            src="/images/icons/icono_malteada.svg"
-            alt="Icono de malteadas"
-          />
-          <p class="mobile-text absolute bottom-0 left-1/2 -translate-x-1/2">
-            Malteadas
-          </p>
-        </a>
-        <a href="#mobile_bitacora" class="mobile_catalogo-bitacora">
-          <p class="mobile-text text-[16px]/5">Bitácora de origen estelar</p>
-          <span
-            class="mobile_catalogo-bitacora-span rotate-210 bg-orange"
-          ></span>
-          <span
-            class="mobile_catalogo-bitacora-span rotate-240 bg-dark-pink"
-          ></span>
-        </a>
       </article>
 
       <article id="mobile_bitacora" class="relative max-w-150 mx-auto mt-20 pt-60">

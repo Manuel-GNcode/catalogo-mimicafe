@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #8b737b;
+      }
+
+      .cls-2 {
+        fill: url(#Degradado_sin_nombre_18);
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-4 {
+        stroke-width: 1.15px;
+      }
+
+      .cls-4, .cls-5, .cls-6 {
+        fill: #fff5ff;
+        stroke: #c6c5ed;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-5 {
+        stroke-width: 1.88px;
+      }
+
+      .cls-8 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-9 {
+        fill: none;
+      }
+
+      .cls-10 {
+        fill: #b9f0f3;
+      }
+
+      .cls-6 {
+        stroke-width: 1.73px;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-10" x="-1472.79" y="-816.84" width="1360" height="866.87"/>
+    </clipPath>
+    <radialGradient id="Degradado_sin_nombre_18" data-name="Degradado sin nombre 18" cx="72.98" cy="97.43" fx="72.98" fy="97.43" r="105.41" gradientTransform="translate(0 6.05) scale(.44 .38)" gradientUnits="userSpaceOnUse">
+      <stop offset=".4" stop-color="#f1d6a1"/>
+      <stop offset=".53" stop-color="#f2c8a0"/>
+      <stop offset=".77" stop-color="#f8a49f"/>
+      <stop offset="1" stop-color="#fe7e9f"/>
+    </radialGradient>
+    <clipPath id="clippath-1">
+      <path class="cls-9" d="m42.36,22.69c-.34,1.55-.46,3.19-.05,4.72.49,1.81,1.69,3.36,3.11,4.58,1.15.99,2.02,1.64,3.16,1.62,2.54-.04,4.39-3.59,5.64-5.98.42-.8.13-.37,1.77-4.22,1.59-3.74,1.76-4.14,2.13-5.38.56-1.85.68-3.95-.3-5.61-2.37-4.02-6.61-2.01-9.31.21-3.09,2.54-5.29,6.14-6.14,10.05Z"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <path class="cls-9" d="m17.55,31.1c1.21,1.03,2.3,2.25,2.91,3.72.71,1.73.7,3.69.32,5.53-.31,1.48-.61,2.53-1.52,3.21-2.04,1.52-5.67-.18-8.11-1.32-.82-.38-.33-.22-3.97-2.27-3.54-2-3.91-2.22-4.96-2.97-1.57-1.13-2.94-2.72-3.18-4.64-.57-4.63,4.03-5.62,7.52-5.5,4,.14,7.94,1.65,10.99,4.24Z"/>
+    </clipPath>
+    <image id="image" width="698" height="451" xlink:href="../../../../../2_catalogo_chikitas/assets/images/2x/logo@2x-8.png"/>
+  </defs>
+  <g id="Capa_5" data-name="Capa 5">
+    <g>
+      <rect class="cls-10" x="-1472.79" y="-816.84" width="1360" height="866.87"/>
+      <g class="cls-8">
+        <image width="3123" height="1769" transform="translate(-1427.07 -803.98) scale(.48)" xlink:href="../../../../../2_catalogo_chikitas/assets/images/fondo_estrellas@2x-8.png"/>
+      </g>
+    </g>
+    <rect class="cls-2" x="0" y="0" width="64" height="64" rx="32" ry="32"/>
+    <g>
+      <g class="cls-7">
+        <use transform="translate(-21.67 26.73) rotate(-10.97) scale(.13)" xlink:href="#image"/>
+      </g>
+      <g class="cls-3">
+        <use transform="translate(70.83 -4.64) rotate(153.51) scale(.13 -.13)" xlink:href="#image"/>
+      </g>
+    </g>
+  </g>
+  <g id="Capa_4" data-name="Capa 4">
+    <g>
+      <ellipse class="cls-5" cx="35.84" cy="42.9" rx="16.59" ry="5.33" transform="translate(-11.88 13.78) rotate(-18.73)"/>
+      <path class="cls-6" d="m46.08,19.16c2.19,6.46-1.46,19.81-10.5,22.87-9.04,3.07-20.05-5.31-22.25-11.77s13.71-11.25,14.31-11.63c.93-.59,16.24-5.94,18.43.52Z"/>
+      <ellipse class="cls-4" cx="29.16" cy="23.21" rx="17.29" ry="5.49" transform="translate(-5.91 10.59) rotate(-18.73)"/>
+      <ellipse class="cls-1" cx="29.39" cy="23.79" rx="15.97" ry="4.3" transform="translate(-6.08 10.7) rotate(-18.73)"/>
+    </g>
+  </g>
+</svg>

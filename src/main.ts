@@ -1,4 +1,3 @@
-// import { gsap } from "gsap";
 import { renderProducts, mainProductsItems } from "./assets/functions/renderProducts.ts";
 import { asignHoverEvent } from "./assets/functions/asignHoverEvent.ts";
 //Animaciones
@@ -10,6 +9,7 @@ import { tlBitacoraCtr, tlCircleBitacora, tlTextBitacora } from "./assets/animat
 import { tlBitacoraToHome, tlMainCircleInitial } from "./assets/animations/animationBitacoraToHome.ts";
 //función de renderizado mobile
 import { renderMobileCatalogo } from "./assets/functions/renderMobileProducts.ts";
+import { scrollNavbar } from "./assets/functions/scrollNavbar.ts";
 
 const btnTortas = document.getElementById('button_tortas');
 const btnMalteadas = document.getElementById('button_malteadas');
@@ -36,6 +36,7 @@ const hoverMap: [HTMLElement | null, number][] = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
+  scrollNavbar();
   if (window.innerWidth >= 1024) {
     isDesktop = true;
     asignHoverEvent(hoverMap, isDesktop, currentState);
@@ -162,7 +163,7 @@ window.addEventListener('resize', () => {
     isDesktop = false;
   }
   if (lastIsDesktop != isDesktop) {
-    renderMobileCatalogo();
+    renderMobileCatalogo();    
     if (currentState == 0) {
       asignHoverEvent(hoverMap, isDesktop, currentState);
     } else if (currentState < 4) {
@@ -172,5 +173,3 @@ window.addEventListener('resize', () => {
     }
   }
 });
-
-

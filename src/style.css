@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-html, body, #mobile {
-  scroll-behavior: smooth;
-}
-
 #avatar-left {
   clip-path: polygon(94% 97%, 98% 96%, 100% 93%, 100% 90%, 95% 88%, 91% 88%, 87% 87%, 82% 86%, 78% 84%, 74% 82%, 74% 79%, 72% 77%, 70% 75%, 69% 72%, 67% 68%, 68% 66%, 67% 64%, 67% 61%, 68% 59%, 72% 62%, 75% 61%, 77% 63%, 81% 64%, 86% 64%, 90% 63%, 93% 61%, 94% 59%, 90% 58%, 86% 57%, 84% 55%, 85% 53%, 87% 50%, 86% 47%, 82% 45%, 78% 44%, 74% 42%, 73% 39%, 71% 37%, 71% 35%, 71% 33%, 75% 32%, 77% 30%, 76% 27%, 75% 25%, 79% 23%, 82% 21%, 84% 19%, 86% 16%, 83% 15%, 78% 14%, 71% 13%, 66% 12%, 67% 9%, 67% 7%, 66% 3%, 60% 0%, 48% 0, 52% 5%, 58% 4%, 60% 6%, 57% 9%, 49% 6%, 37% 5%, 30% 6%, 22% 9%, 16% 12%, 12% 18%, 8% 17%, 4% 18%, 0 22%, 0 26%, 4% 29%, 8% 30%, 8% 34%, 14% 36%, 18% 38%, 25% 39%, 22% 43%, 17% 48%, 12% 52%, 10% 49%, 10% 45%, 9% 42%, 7% 40%, 8% 37%, 6% 34%, 4% 37%, 3% 39%, 3% 42%, 3% 45%, 4% 48%, 6% 51%, 7% 53%, 6% 56%, 0% 58%, 0% 60%, 6% 61%, 8% 62%, 13% 62%, 14% 64%, 16% 66%, 22% 64%, 26% 67%, 28% 69%, 22% 70%, 17% 74%, 16% 77%, 17% 80%, 15% 82%, 14% 85%, 15% 87%, 17% 89%, 20% 91%, 26% 91%, 32% 90%, 35% 89%, 40% 87%, 44% 86%, 48% 84%, 54% 84%, 59% 86%, 63% 88%, 67% 92%, 70% 94%, 73% 96%, 76% 98%, 79% 100%, 88% 100%);
 }
@@ -186,18 +182,15 @@ html, body, #mobile {
     @apply relative size-full bg-gradient-to-b from-dark-pink to-yellow rounded-full;
   }
   .mobile_catalogo {
-    @apply px-10 py-30 flex flex-col gap-14 bg-light-green rounded-r-[70px] border-4 border-white sm:px-20 sm:gap-18;
+    @apply px-12 py-30 flex flex-col gap-14 bg-light-green rounded-r-[70px] border-4 border-white sm:px-20 sm:gap-18;
   }
   .mobile_catalogo-product {
     @apply relative w-full max-w-80 mx-auto border-4 border-white-opacity h-60 rounded-xl;
   }
   .mobile_catalogo-a {
-    @apply absolute w-22 h-22 rounded-full p-6 border-4 border-white-opacity bottom-0 left-0 translate-y-1/2 sm:w-30 sm:h-30;
+    @apply w-16 h-16 aspect-square p-2 rounded-full border-4 border-white-opacity sm:w-20 sm:h-20 sm:p-4;
   }
-  .mobile_catalogo-bitacora {
-    @apply w-40 h-40 rounded-full bg-violet absolute right-0 bottom-0 translate-x-1/4 translate-y-1/2 grid place-content-center text-center p-4 border-4 border-white sm:w-50 sm:h-50;
-  }
-  .mobile_catalogo-bitacora-span {
+  .mobile_catalogo-span {
     @apply absolute w-1/3 h-5 rounded-xl right-0 top-1/2 -translate-y-1/2 translate-x-[50%] origin-[-100%_center] border-4 border-white;
   }
 }
