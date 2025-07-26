@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://catalogo-mimicafe.vercel.app/sitemap.xml

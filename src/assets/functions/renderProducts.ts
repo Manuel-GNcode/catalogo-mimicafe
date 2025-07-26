@@ -21,8 +21,8 @@ export const renderProducts = (category:number)=>{
       <img src="${item.imgUrl}" alt="${item.name}" class="w-full h-full object-cover object-center rounded-[20px]">
 
       <span class="absolute left-1/2 -translate-x-1/2 -bottom-12 w-40">
-        <h2 class="products_item-text-border text-[16px]/4 bg-white text-center px-4 py-1.5 w-full rounded-2xl">${item.name}</h2>
-        <p class="products_item-text-border text-[12px] bg-gray rounded-b-xl w-fit px-4 py-1 mx-auto">$ ${item.prize}</p>
+        <h2 class="border-white-gray-little text-[16px]/4 bg-white text-center px-4 py-1.5 w-full rounded-2xl">${item.name}</h2>
+        <p class="border-white-gray-little text-[12px] bg-gray rounded-b-xl w-fit px-4 py-1 mx-auto">$ ${item.prize}</p>
       </span>
       </div>
       `

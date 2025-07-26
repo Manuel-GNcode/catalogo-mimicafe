@@ -29,8 +29,8 @@ export const renderMobileCatalogo = () => {
         <div class="mobile_catalogo-product ${currentColor} ">
           <img src="${item.imgUrl}" alt="${item.name}" class="size-full object-cover rounded-[10px]">
           <span class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-3/4">
-            <p class="mobile-title bg-white px-8 py-1 whitespace-nowrap rounded-xl text-xl sm:text-2xl">${item.name}</p>
-            <p class="mobile-text bg-gray w-fit px-6 mx-auto rounded-b-xl">$ ${item.prize}</p>
+            <p class="border-white-gray-little bg-white px-8 py-1 whitespace-nowrap rounded-xl text-base">${item.name}</p>
+            <p class="border-white-gray-little bg-gray w-fit px-6 mx-auto rounded-b-xl text-sm">$ ${item.prize}</p>
           </span>
         </div>
       `

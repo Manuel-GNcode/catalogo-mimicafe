@@ -10,15 +10,15 @@
   clip-path: polygon(20% 100%, 22% 98%, 23% 96%, 28% 91%, 34% 83%, 38% 78%, 41% 74%, 44% 76%, 49% 77%, 57% 75%, 66% 72%, 75% 67%, 80% 66%, 85% 66%, 92% 64%, 92% 57%, 89% 55%, 86% 53%, 86% 51%, 92% 47%, 96% 45%, 100% 41%, 100% 38%, 95% 41%, 90% 36%, 84% 34%, 79% 32%, 76% 29%, 84% 29%, 90% 26%, 93% 23%, 93% 21%, 89% 25%, 84% 27%, 81% 27%, 81% 25%, 80% 23%, 84% 23%, 87% 20%, 87% 16%, 84% 13%, 79% 10%, 76% 13%, 74% 17%, 69% 22%, 66% 18%, 64% 14%, 59% 10%, 55% 7%, 54% 5%, 51% 5%, 44% 4%, 36% 4%, 31% 5%, 28% 2%, 25% 0%, 23% 0, 23% 4%, 25% 7%, 20% 8%, 15% 9%, 15% 13%, 17% 16%, 21% 18%, 25% 19%, 22% 23%, 26% 21%, 24% 28%, 28% 24%, 29% 22%, 31% 26%, 29% 34%, 25% 39%, 25% 42%, 27% 45%, 25% 48%, 21% 51%, 21% 53%, 17% 54%, 14% 55%, 16% 56%, 17% 58%, 20% 57%, 26% 58%, 25% 61%, 25% 65%, 27% 65%, 30% 63%, 30% 65%, 30% 70%, 25% 71%, 22% 75%, 17% 78%, 12% 81%, 5% 84%, 0 86%, 0% 89%, 2% 92%, 5% 94%, 8% 95%, 8% 97%, 15% 100%);
 }
 
-.main_wrapper-paragrah {
+.border-gray-white {
+  color: hsl(209.091, 16%, 60%);
   text-shadow: 
-    2px 2px 0 #fff,
-    -2px 2px 0 #fff,
-    -2px -2px 0 #fff,
-    2px -2px 0 #fff;
+    1.5px 1.5px 0 #fff,
+    -1.5px 1.5px 0 #fff,
+    -1.5px -1.5px 0 #fff,
+    1.5px -1.5px 0 #fff;
 }
 .border-white-gray {
-  font-size: 22px;
   color: #fff;
   text-shadow: 
     2px 2px 0px hsl(240, 18%, 55%),
@@ -26,7 +26,7 @@
     -2px -2px 0px hsl(240, 18%, 55%),
     2px -2px 0px hsl(240, 18%, 55%);
 }
-.products_item-text-border {
+.border-white-gray-little {
   color: #fff;
   text-shadow: 
     1.5px 1.5px 0px hsl(240, 18%, 55%),
@@ -34,14 +34,7 @@
     -1.5px -1.5px 0px hsl(240, 18%, 55%),
     1.5px -1.5px 0px hsl(240, 18%, 55%);
 }
-.bitacora-text {
-  color: #fff;
-  text-shadow: 
-    1.5px 1.5px 0px hsl(240, 18%, 55%),
-    -1.5px 1.5px 0px hsl(240, 18%, 55%),
-    -1.5px -1.5px 0px hsl(240, 18%, 55%),
-    1.5px -1.5px 0px hsl(240, 18%, 55%);
-}
+
 .inner_orbit-left, .inner_orbit-left-mobile {
   transform: translate(-50%, -50%) rotateX(50deg) rotateY(15deg) rotateZ(0deg);
   animation: spinLeft 6s linear infinite;
@@ -139,7 +132,7 @@
     @apply size-1/2;
   }
   .main_buttons-paragrah {
-    @apply text-white text-[14px] sm:text-[25px] absolute -bottom-1/20;
+    @apply absolute -bottom-1/20;
   }
   .main_bitacora-span {
     @apply absolute left-[85%] top-1/2 w-1/3 h-1/8 border-4 border-white rounded-full origin-[-110%_center];
@@ -161,16 +154,16 @@
   }
   /* Estilos para mobile */
   .article_avatar {
-    @apply w-50 aspect-square absolute left-0 top-[122px] -translate-y-1/2 -translate-x-1/3 sm:w-65 sm:top-[152px];
+    @apply w-50 aspect-square absolute left-0 top-[120px] -translate-y-1/2 -translate-x-1/3 sm:w-65 sm:top-[152px];
   }
   .article_avatar-text {
     @apply absolute -z-1 right-0 top-1/2 translate-x-full -translate-y-1/2;
   }
   .article_avatar-text-title {
-    @apply px-5 py-1 w-fit rounded-tr-2xl text-xl sm:px-8 sm:text-2xl;
+    @apply px-5 py-1 w-fit rounded-tr-2xl text-xl sm:px-8;
   }
   .article_avatar-text-p {
-    @apply bg-white whitespace-nowrap px-5 py-2 rounded-r-2xl text-base sm:px-8 sm:text-xl;
+    @apply bg-white whitespace-nowrap px-5 py-2 rounded-r-2xl text-base sm:px-8;
   }
   .article_avatar-ctr {
     @apply size-full bg-purple rounded-full translate-x-2 p-2 sm:p-3;
@@ -182,7 +175,7 @@
     @apply relative size-full bg-gradient-to-b from-dark-pink to-yellow rounded-full;
   }
   .mobile_catalogo {
-    @apply px-12 py-30 flex flex-col gap-14 bg-light-green rounded-r-[70px] border-4 border-white sm:px-20 sm:gap-18;
+    @apply px-12 py-28 flex flex-col gap-14 bg-light-green rounded-r-[70px] border-4 border-white sm:px-20 sm:gap-18;
   }
   .mobile_catalogo-product {
     @apply relative w-full max-w-80 mx-auto border-4 border-white-opacity h-60 rounded-xl;
@@ -193,20 +186,4 @@
   .mobile_catalogo-span {
     @apply absolute w-1/3 h-5 rounded-xl right-0 top-1/2 -translate-y-1/2 translate-x-[50%] origin-[-100%_center] border-4 border-white;
   }
-}
-.mobile-title {
-  color: #fff;
-  text-shadow: 
-    2px 2px 0px hsl(240, 18%, 55%),
-    -2px 2px 0px hsl(240, 18%, 55%),
-    -2px -2px 0px hsl(240, 18%, 55%),
-    2px -2px 0px hsl(240, 18%, 55%);
-}
-.mobile-text {
-  color: #fff;
-  text-shadow: 
-    1.5px 1.5px 0px hsl(240, 18%, 55%),
-    -1.5px 1.5px 0px hsl(240, 18%, 55%),
-    -1.5px -1.5px 0px hsl(240, 18%, 55%),
-    1.5px -1.5px 0px hsl(240, 18%, 55%);
 }

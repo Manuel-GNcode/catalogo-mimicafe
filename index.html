@@ -25,75 +25,41 @@
     <meta name="twitter:image" content="https://catalogo-mimicafe.vercel.app/new_og.webp" />
   </head>
   <body class="font-montserrat bg-green">
-    <section
-      id="main"
-      class="h-dvh w-full relative z-10 overflow-x-clip lg:overflow-hidden"
-    >
-      <!-- Background -->
-      <img
-        src="/images/fondo_estrellas.webp"
-        alt="Background"
-        class="absolute left-0 top-0 w-full h-full object-cover opacity-50"
-      />
+    <!-- Sección desktop -->
+    <section id="main" class="h-dvh w-full relative z-10 overflow-x-clip lg:overflow-hidden">
+      <!-- Fondo de estrellas -->
+      <img src="/images/fondo_estrellas.webp" alt="Background" class="absolute left-0 top-0 w-full h-full object-cover opacity-50"/>
 
-      <!-- products section -->
-      <div
-        id="main_products"
-        class="absolute left-1/8 top-1/2 -translate-y-1/2 border-6 border-white w-[0%] h-100 bg-light-green rounded-[80px] opacity-0"
-      >
-        <div
-          id="main_products-title"
-          class="hidden absolute left-1/4 top-0 -translate-y-1/2 gap-2"
-        >
-          <h2
-            class="border-white-gray bg-white px-8 py-2 rounded-2xl relative z-10 w-fit"
-          >
+      <!-- sección de productos -->
+      <div id="main_products" class="absolute left-1/8 top-1/2 -translate-y-1/2 border-6 border-white w-[0%] h-100 bg-light-green rounded-[80px] opacity-0">
+        <div id="main_products-title" class="hidden absolute left-1/4 top-0 -translate-y-1/2 gap-2">
+          <h2 class="border-white-gray text-[22px] bg-white px-8 py-2 rounded-2xl relative z-10 w-fit">
             Nuestras delicias:
           </h2>
-          <p
-            id="main_products-name"
-            class="px-8 py-2 border-white-gray bg-white border-2 border-white-opacity rounded-2xl"
-          ></p>
+          <p id="main_products-name" class="px-8 py-2 border-white-gray text-[22px] bg-white border-2 border-white-opacity rounded-2xl"></p>
         </div>
-
-        <div
-          id="main_products-items"
-          class="absolute right-0 w-[80%] h-full flex justify-between items-center px-10 pt-10 pb-16"
-        ></div>
+        <div id="main_products-items" class="absolute right-0 w-[80%] h-full flex justify-between items-center px-10 pt-10 pb-16"></div>
       </div>
 
-      <div
-        id="main_ctr"
-        class="w-1/2 max-w-[400px] min-w-[300px] aspect-1/1 bg-gray rounded-full relative left-1/2 top-1/2 -translate-1/2 p-2 text-center sm:p-4"
-      >
-        <!-- Avatars -->
+      <!-- sección de las avatares  -->
+      <div id="main_ctr" class="w-1/2 max-w-[400px] min-w-[300px] aspect-1/1 bg-gray rounded-full relative left-1/2 top-1/2 -translate-1/2 p-2 text-center sm:p-4">
         <div id="main_avatars" class="absolute size-full left-0 top-0">
-          <img
-            src="/images/avatars/personaje_izquierda.webp"
+          <img src="/images/avatars/personaje_izquierda.webp"
             alt="Avatar left"
             id="avatar-left"
-            class="main_avatar w-5/6 -left-3/4 hidden sm:block"
-          />
-          <img
-            src="/images/avatars/personaje_derecha.webp"
+            class="main_avatar w-5/6 -left-3/4 hidden sm:block"/>
+          <img src="/images/avatars/personaje_derecha.webp"
             alt="Avatar right"
             id="avatar-right"
-            class="main_avatar w-11/10 -right-3/4 hidden sm:block"
-          />
+            class="main_avatar w-11/10 -right-3/4 hidden sm:block"/>
         </div>
 
         <!-- food buttons -->
-        <div
-          id="main_buttons"
-          class="absolute size-full left-0 top-0 rounded-full"
-        >
-          <button
-            id="button_tortas"
-            class="main_button transform -translate-y-1/2 rotate-140 bg-orange"
-          >
+        <div id="main_buttons" class="absolute size-full left-0 top-0 rounded-full">
+          <button id="button_tortas" class="main_button transform -translate-y-1/2 rotate-140 bg-orange">
             <div class="-rotate-140 main_button-ctr">
               <img src="/images/icons/icono_torta.svg" alt="Icono de torta" />
-              <p class="border-white-gray main_buttons-paragrah">Tortas</p>
+              <p class="border-white-gray main_buttons-paragrah text-[18px] sm:text-[24px]">Tortas</p>
             </div>
             <a
               href="#mobile_tortas"
@@ -110,7 +76,7 @@
                 src="/images/icons/icono_malteada.svg"
                 alt="Icono de malteda"
               />
-              <p class="border-white-gray main_buttons-paragrah">Malteadas</p>
+              <p class="border-white-gray main_buttons-paragrah text-[18px] sm:text-[24px]">Malteadas</p>
             </div>
             <a
               href="#mobile_malteadas"
@@ -123,7 +89,7 @@
           >
             <div class="-rotate-40 main_button-ctr">
               <img src="/images/icons/icono_helado.svg" alt="Icono de helado" />
-              <p class="border-white-gray main_buttons-paragrah">Helados</p>
+              <p class="border-white-gray main_buttons-paragrah text-[18px] sm:text-[24px]">Helados</p>
             </div>
             <a
               href="#mobile_helados"
@@ -146,14 +112,10 @@
               alt="Logo Mimicafe"
               class="w-full h-auto"
             />
-            <p
-              class="main_wrapper-paragrah text-gray w-56 text-[12px]/3 sm:text-[14px]/4"
-            >
+            <p class="border-gray-white w-56 text-[12px]/3 sm:text-[14px]/4">
               Cada bocado es una pequeña rebelión contra lo ordinario
             </p>
-            <span
-              class="text-[14px]/4 text-purple absolute -bottom-1 bg-light-green border-2 border-white rounded-full px-2 py-1 w-2/3 sm:text-[16px]/4"
-              >Descubre nuestras delicias</span
+            <span class="text-[14px]/4 text-purple absolute -bottom-1 bg-light-green border-2 border-white rounded-full px-2 py-1 w-2/3 sm:text-[16px]/4">Descubre nuestras delicias</span
             >
           </div>
 
@@ -222,13 +184,13 @@
 
         <div class="flex flex-col gap-4 absolute left-10 w-60">
           <span>
-            <p class="bitacora-text text-[14px]">Cordoba Colombia</p>
-            <p class="bitacora-text text-[14px]">Cra. 1#1-23 Barrio La Luna</p>
+            <p class="border-white-gray-little text-[14px]">Cordoba Colombia</p>
+            <p class="border-white-gray-little text-[14px]">Cra. 1#1-23 Barrio La Luna</p>
           </span>
 
           <span>
-            <p class="bitacora-text text-[14px]">Antioquia Colombia</p>
-            <p class="bitacora-text text-[14px]">Cra. 4#5-67 Barrio Titan</p>
+            <p class="border-white-gray-little text-[14px]">Antioquia Colombia</p>
+            <p class="border-white-gray-little text-[14px]">Cra. 4#5-67 Barrio Titan</p>
           </span>
         </div>
       </div>
@@ -271,12 +233,12 @@
           <p class="border-white-gray text-[22px]/6">
             Bitacora de origen estelar
           </p>
-          <p class="bitacora-text hidden text-[14px]/4">
+          <p class="border-white-gray-little bitacora-text hidden text-[14px]/4">
             En nuestro viaje a la luna, descubrimos que una tacita de café
             combina con todo: Desde una lluvia de estrellas hasta la rebelión de
             las chicas mágicas.
           </p>
-          <p class="bitacora-text hidden text-[14px]/4">
+          <p class="border-white-gray-little bitacora-text hidden text-[14px]/4">
             Así nació nuestra pastelería intergaláctica, un rincón donde
             horneamos dulces con polvo de cometa, glaseamos con rayos de aurora
             y servimos cada creación con una sonrisa y, por supuesto, una buena
@@ -307,21 +269,13 @@
         </div>
       </div>
 
-      <div
-        id="main_home"
+      <div id="main_home"
         class="absolute w-1/4 max-w-60 min-w-40 aspect-1/1 bg-gray-green border-4 border-lighter-purple rounded-full -right-[5%] -bottom-[10%]"
       >
-        <span
-          class="main_home-span bg-pink transform -translate-y-1/2 -rotate-120"
-        ></span>
-        <span
-          class="main_home-span bg-orange-pink transform -translate-y-1/2 -rotate-150"
-        ></span>
+        <span class="main_home-span bg-pink transform -translate-y-1/2 -rotate-120"></span>
+        <span class="main_home-span bg-orange-pink transform -translate-y-1/2 -rotate-150"></span>
 
-        <button
-          id="main_home-btn"
-          class="size-full rounded-full px-10 pt-8 cursor-pointer hidden"
-        >
+        <button id="main_home-btn" class="size-full rounded-full px-10 pt-8 cursor-pointer hidden">
           <img
             class="w-full h-auto object-cover"
             src="/images/logo_mimicafe.webp"
@@ -349,23 +303,19 @@
         </a>
 
         <a href="#mobile_bitacora" class="bg-violet w-full aspect-square rounded-full grid place-content-center p-2 border-4 border-white relative">
-          <p class="mobile-text text-[12px] text-center sm:text-base">Bitácora estelar</p>
+          <p class="border-white-gray-little text-[12px] text-center sm:text-base">Bitácora estelar</p>
           <div class="mobile_catalogo-span rotate-210 bg-orange"></div>
           <div class="mobile_catalogo-span rotate-240 bg-dark-pink"></div>
         </a>
       </div>
 
-      <article
-        id="mobile_tortas"
-        class="relative mt-25 pt-25 max-w-150 mx-auto sm:pt-38"
-      >
-        <!-- muñeca -->
+      <article id="mobile_tortas" class="relative mt-25 pt-33 max-w-150 mx-auto sm:pt-42">
         <div class="article_avatar">
           <span class="article_avatar-text">
-            <p class="mobile-title bg-orange article_avatar-text-title">
+            <p class="border-white-gray bg-orange article_avatar-text-title">
               Tortas
             </p>
-            <p class="mobile-text article_avatar-text-p">Nuestras delicias</p>
+            <p class="border-white-gray-little article_avatar-text-p">Nuestras delicias</p>
           </span>
           <div class="article_avatar-ctr">
             <div class="article_avatar-ctr-icon bg-orange">
@@ -387,15 +337,15 @@
         <div id="mobile_tortas-catalogo" class="mobile_catalogo"></div>
       </article>
 
-      <article id="mobile_malteadas" class="relative mt-10 pt-30 max-w-150 mx-auto sm:pt-38"
+      <article id="mobile_malteadas" class="relative mt-10 pt-33 max-w-150 mx-auto sm:pt-42"
       >
         <!-- muñeca -->
         <div class="article_avatar">
           <span class="article_avatar-text">
-            <p class="mobile-title bg-pastel-viole article_avatar-text-title">
+            <p class="border-white-gray bg-pastel-viole article_avatar-text-title">
               Malteadas
             </p>
-            <p class="mobile-text article_avatar-text-p">Nuestras delicias</p>
+            <p class="border-white-gray-little article_avatar-text-p">Nuestras delicias</p>
           </span>
           <div class="article_avatar-ctr">
             <div class="article_avatar-ctr-icon bg-pastel-viole">
@@ -420,17 +370,14 @@
         <div id="mobile_malteadas-catalogo" class="mobile_catalogo"></div>
       </article>
 
-      <article
-        id="mobile_helados"
-        class="relative mt-10 pt-30 max-w-150 mx-auto sm:pt-38"
-      >
+      <article id="mobile_helados" class="relative mt-10 pt-33 max-w-150 mx-auto sm:pt-42">
         <!-- muñeca -->
         <div class="article_avatar">
           <span class="article_avatar-text">
-            <p class="mobile-title bg-green-yellow article_avatar-text-title">
+            <p class="border-white-gray bg-green-yellow article_avatar-text-title">
               Helados
             </p>
-            <p class="mobile-text article_avatar-text-p">Nuestras delicias</p>
+            <p class="border-white-gray-little article_avatar-text-p">Nuestras delicias</p>
           </span>
           <div class="article_avatar-ctr">
             <div class="article_avatar-ctr-icon bg-green-yellow">
@@ -453,7 +400,7 @@
 
       </article>
 
-      <article id="mobile_bitacora" class="relative max-w-150 mx-auto mt-20 pt-60">
+      <article id="mobile_bitacora" class="relative max-w-150 mx-auto mt-20 pt-70">
         <div class="article_avatar top-[100px]">
           <div class="article_avatar-ctr">
             <a href="#mobile_helados" class="article_avatar-ctr-icon bg-green-yellow top-1/2 translate-x-1/2 -translate-y-1/2 -right-1/20">
@@ -481,7 +428,7 @@
         <div class="px-10 sm:px-20 flex flex-col gap-8 items-center text-center">
           <div class="relative w-50 aspect-square bg-violet rounded-full grid place-content-center transform-3d">
             <img class="absolute right-0 top-0 size-1/3 rounded-full border-4 border-white p-2 bg-green-yellow" src="/images/icons/icono_café.svg" alt="Icono taza de café">
-            <p class="mobile-title">Bitácora de origen estelar</p>
+            <p class="border-white-gray-little text-[16px]/5">Bitácora de origen estelar</p>
 
             <div class="inner_orbit-left-mobile transform-3d w-[140%] h-[140%] absolute top-1/2 left-1/2 rounded-full border-6 border-purple pointer-events-none">
               <span
@@ -505,12 +452,12 @@
           </div>
 
           <div>
-            <p class="mobile-text text-[14px]/5 mb-4">
+            <p class="border-white-gray-little text-[16px]/5 mb-4">
               En nuestro viaje a la luna, descubrimos que una tacita de café
               combina con todo: Desde una lluvia de estrellas hasta la rebelión
               de las chicas mágicas.
             </p>
-            <p class="mobile-text text-[14px]/5">
+            <p class="border-white-gray-little text-[16px]/5">
               Así nació nuestra pastelería intergaláctica, un rincón donde
               horneamos dulces con polvo de cometa, glaseamos con rayos de
               aurora y servimos cada creación con una sonrisa y, por supuesto,
@@ -545,12 +492,12 @@
         <!-- Dirección -->
         <div class="relative py-14 px-10 sm:px-20 flex flex-col gap-4 overflow-hidden">
           <span>
-            <p class="mobile-text text-[12px]">Cordoba, Colombia</p>
-            <p class="mobile-text text-[12px]">Carrear 41#53-38 viva</p>
+            <p class="border-white-gray-little text-[14px]">Cordoba, Colombia</p>
+            <p class="border-white-gray-little text-[14px]">Carrera 41#53-38 viva</p>
           </span>
           <span>
-            <p class="mobile-text text-[12px]">Cordoba, Colombia</p>
-            <p class="mobile-text text-[12px]">Carrear 41#53-38 viva</p>
+            <p class="border-white-gray-little text-[14px]">Cordoba, Colombia</p>
+            <p class="border-white-gray-little text-[14px]">Carrera 41#53-38 viva</p>
           </span>
 
           <div class="absolute left-0 -bottom-6 bg-pastel-viole text-white border-4 border-white rounded-full px-0.5 py-8 flex flex-col items-center text-[16px]">
