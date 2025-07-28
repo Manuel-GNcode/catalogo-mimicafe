@@ -32,9 +32,9 @@
     </div>
 
     <!-- Sección desktop -->
-    <section id="main" class="hidden h-dvh w-full relative z-10 overflow-x-clip lg:overflow-hidden">
+    <main id="main" class="hidden h-dvh w-full relative z-10 overflow-x-clip lg:overflow-hidden">
       <!-- Fondo de estrellas -->
-      <img src="/images/fondo_estrellas.webp" alt="Background" class="absolute left-0 top-0 w-full h-full object-cover opacity-50"/>
+      <img src="/images/fondo_estrellas.webp" alt="" class="absolute left-0 top-0 w-full h-full object-cover opacity-50"/>
 
       <!-- sección de productos -->
       <div id="main_products" class="absolute left-1/8 top-1/2 -translate-y-1/2 border-6 border-white w-[0%] h-100 bg-light-green rounded-[80px] opacity-0">
@@ -51,43 +51,32 @@
       <div id="main_ctr" class="w-1/2 max-w-[400px] min-w-[300px] aspect-1/1 bg-gray rounded-full relative left-1/2 top-1/2 -translate-1/2 p-2 text-center sm:p-4">
         <div id="main_avatars" class="absolute size-full left-0 top-0">
           <img src="/images/avatars/personaje_izquierda.webp"
-            alt="Avatar left"
+            alt="Avatar muñeca de las tortas"
             id="avatar-left"
             class="main_avatar w-5/6 -left-3/4 hidden sm:block"/>
           <img src="/images/avatars/personaje_derecha.webp"
-            alt="Avatar right"
+            alt="Avatar muñeca de los helados"
             id="avatar-right"
             class="main_avatar w-11/10 -right-3/4 hidden sm:block"/>
         </div>
 
         <!-- food buttons -->
         <div id="main_buttons" class="absolute size-full left-0 top-0 rounded-full">
-          <button id="button_tortas" class="main_button transform -translate-y-1/2 rotate-140 bg-orange">
+          <button aria-label="Ir a la sección de tortas" id="button_tortas" class="main_button transform -translate-y-1/2 rotate-140 bg-orange">
             <div class="-rotate-140 main_button-ctr">
               <img src="/images/icons/icono_torta.svg" alt="Icono de torta" />
               <p class="border-white-gray main_buttons-paragrah text-[18px] sm:text-[24px]">Tortas</p>
             </div>
-            <a
-              href="#mobile_tortas"
-              class="absolute left-0 top-0 size-full lg:hidden"
-            ></a>
+            <a aria-label="Ir a la sección de tortas" href="#mobile_tortas" class="absolute left-0 top-0 size-full lg:hidden"></a>
           </button>
-          <button
-            id="button_malteadas"
-            class="main_button transform -translate-y-1/2 rotate-90 bg-light-purple"
-          >
+          <button id="button_malteadas" class="main_button transform -translate-y-1/2 rotate-90 bg-light-purple">
             <div class="-rotate-90 main_button-ctr">
-              <img
-                id="icono-malteada"
+              <img id="icono-malteada"
                 src="/images/icons/icono_malteada.svg"
-                alt="Icono de malteda"
-              />
+                alt="Icono de malteda"/>
               <p class="border-white-gray main_buttons-paragrah text-[18px] sm:text-[24px]">Malteadas</p>
             </div>
-            <a
-              href="#mobile_malteadas"
-              class="absolute left-0 top-0 size-full lg:hidden"
-            ></a>
+            <a aria-label="Ir a la sección de malteadas" href="#mobile_malteadas" class="absolute left-0 top-0 size-full lg:hidden"></a>
           </button>
           <button
             id="button_helados"
@@ -97,7 +86,7 @@
               <img src="/images/icons/icono_helado.svg" alt="Icono de helado" />
               <p class="border-white-gray main_buttons-paragrah text-[18px] sm:text-[24px]">Helados</p>
             </div>
-            <a
+            <a aria-label="Ir a la sección de helados"
               href="#mobile_helados"
               class="absolute left-0 top-0 size-full lg:hidden"
             ></a>
@@ -115,7 +104,7 @@
           >
             <img
               src="/images/logo_mimicafe.webp"
-              alt="Logo Mimicafe"
+              alt="Logo de la empresa Mimicafé"
               class="w-full h-auto"
             />
             <p class="border-gray-white w-56 text-[12px]/3 sm:text-[14px]/4">
@@ -129,7 +118,7 @@
             <img
               id="main_wrapper-avatar-tortas"
               src="/images/avatars/personaje_torta.webp"
-              alt="Personaje de las tortas"
+              alt="Avatar muñeca de las tortas mostrando producto"
               class="main_wrapper-avatar"
             />
           </figure>
@@ -137,7 +126,7 @@
             <img
               id="main_wrapper-avatar-malteadas"
               src="/images/avatars/personaje_malteada.webp"
-              alt="Personaje de las tortas"
+              alt="Avatar muñeca de las malteadas mostrando producto"
               class="main_wrapper-avatar"
             />
           </figure>
@@ -145,7 +134,7 @@
             <img
               id="main_wrapper-avatar-helados"
               src="/images/avatars/personaje_helado.webp"
-              alt="Personaje de las tortas"
+              alt="Avatar muñeca de los helados mostrando producto"
               class="main_wrapper-avatar"
             />
           </figure>
@@ -153,7 +142,7 @@
 
         <img
           src="/images/avatars/personaje_centro.webp"
-          alt="Avatar top"
+          alt="Avatar muñeca de las malteadas"
           id="avatar-top"
           class="cursor-pointer absolute h-auto w-1/2 left-1/2 -translate-x-1/2 -top-2/7 pointer-events-none lg:pointer-events-auto"
         />
@@ -189,36 +178,33 @@
         <p class="-mb-2">n</p>
 
         <div class="flex flex-col gap-4 absolute left-10 w-60">
-          <span>
+          <div>
             <p class="border-white-gray-little text-[14px]">Cordoba Colombia</p>
             <p class="border-white-gray-little text-[14px]">Cra. 1#1-23 Barrio La Luna</p>
-          </span>
+          </div>
 
-          <span>
+          <div>
             <p class="border-white-gray-little text-[14px]">Antioquia Colombia</p>
             <p class="border-white-gray-little text-[14px]">Cra. 4#5-67 Barrio Titan</p>
-          </span>
+          </div>
         </div>
       </div>
 
       <!-- social media -->
-      <div
+      <nav aria-label="Redes sociales"
         id="main_social"
         class="absolute right-1/40 top-1/6 sm:top-1/2 -translate-y-1/2 bg-white-opacity border-4 border-white py-4 px-2 rounded-2xl flex flex-col gap-2"
       >
-        <a href="#" class="btn-effect-wp">
+        <a aria-label="Ir al whatsapp de mimicafé" href="https://www.youtube.com/@GankandGit" target="_blank" class="btn-effect-wp">
           <img src="/images/icons/icono_whatsapp.svg" alt="Icono de Whatsapp" />
         </a>
-        <a href="#" class="btn-effect-yt">
+        <a aria-label="Ir al canal de youtube de mimicafé" href="https://www.youtube.com/@GankandGit" target="_blank" class="btn-effect-yt">
           <img src="/images/icons/icono_youtube.svg" alt="Icono de Youtube" />
         </a>
-        <a href="#" class="btn-effect-ig">
-          <img
-            src="/images/icons/icono_instagram.svg"
-            alt="Icono de Instagram"
-          />
+        <a aria-label="Ir al instagram de mimicafé" href="https://www.youtube.com/@GankandGit" target="_blank" class="btn-effect-ig">
+          <img src="/images/icons/icono_instagram.svg" alt="Icono de Instagram" />
         </a>
-      </div>
+      </nav>
 
       <!-- sections circle -->
       <div
@@ -232,7 +218,7 @@
           class="main_bitacora-span bg-orange-pink transform -translate-y-1/2 -rotate-30"
         ></span>
 
-        <button id="main_bitacora-btn" class="size-full rounded-full cursor-pointer hidden flex-col justify-start items-center gap-2 px-8 py-18">
+        <button aria-label="Ir a la bitacora estelar" id="main_bitacora-btn" class="size-full rounded-full cursor-pointer hidden flex-col justify-start items-center gap-2 px-8 py-18">
           <p class="border-white-gray text-[22px]/6">
             Bitacora de origen estelar
           </p>
@@ -278,51 +264,55 @@
         <span class="main_home-span bg-pink transform -translate-y-1/2 -rotate-120"></span>
         <span class="main_home-span bg-orange-pink transform -translate-y-1/2 -rotate-150"></span>
 
-        <button id="main_home-btn" class="size-full rounded-full px-10 pt-8 cursor-pointer hidden">
+        <button aria-label="Ir al home" id="main_home-btn" class="size-full rounded-full px-10 pt-8 cursor-pointer hidden">
           <img
             class="w-full h-auto object-cover"
             src="/images/logo_mimicafe.webp"
-            alt="Logo mimicafé"
+            alt="Logo de la empresa mimicafé"
           />
         </button>
       </div>
-    </section>
+    </main>
 
     <!-- Mobile section -->
     <section id="mobile" class="hidden relative px-12 overflow-hidden lg:hidden">
       <div class="absolute opacity-40 left-0 top-0 size-full bg-[url('/images/fondo_estrellas.webp')] bg-auto"></div>
       <!-- navbar -->
-      <div id="navbar" class="absolute z-50 w-35 top-0 right-0 p-4 flex flex-col items-end gap-2 sm:w-40">
-        <a href="#mobile_tortas" class="bg-orange mobile_catalogo-a">
-          <img class="size-full" src="/images/icons/icono_torta.svg" alt="Icono de malteadas"/>
+      <nav aria-label="Menu de navegación" id="navbar" class="absolute z-50 w-35 top-24 right-0 p-4 flex flex-col items-end gap-2 translate-x-full sm:w-40">
+        <button tabindex="-1" aria-label="Mostrar menu lateral" id="navbar_btn" class="w-16 h-16 bg-gradient-to-b from-dark-pink to-yellow border-4 border-white rounded-full p-2 cursor-pointer">
+          <img class="size-full invert" src="/images/icons/burger-icon.svg" alt="Icono de menú">
+        </button>
+
+        <a aria-label="Ir a la sección de tortas" tabindex="-1" href="#mobile_tortas" class="bg-orange mobile_catalogo-a">
+          <img class="size-full" src="/images/icons/icono_torta.svg" alt="Icono de tortas"/>
         </a>
 
-        <a href="#mobile_malteadas" class="bg-pastel-viole mobile_catalogo-a">
+        <a aria-label="Ir a la sección de malteadas" tabindex="-1" href="#mobile_malteadas" class="bg-pastel-viole mobile_catalogo-a">
           <img class="size-full" src="/images/icons/icono_malteada.svg" alt="Icono de malteadas"/>
         </a>
 
-        <a href="#mobile_helados" class="bg-green-yellow mobile_catalogo-a">
-          <img class="size-full" src="/images/icons/icono_helado.svg" alt="Icono de malteadas"/>
+        <a aria-label="Ir a la sección de helados" tabindex="-1" href="#mobile_helados" class="bg-green-yellow mobile_catalogo-a">
+          <img class="size-full" src="/images/icons/icono_helado.svg" alt="Icono de helados"/>
         </a>
 
-        <a href="#mobile_bitacora" class="bg-violet w-full aspect-square rounded-full grid place-content-center p-2 border-4 border-white relative">
+        <a aria-label="Ir a la sección de bitacora" tabindex="-1" href="#mobile_bitacora" class="bg-violet w-full aspect-square rounded-full grid place-content-center p-2 border-4 border-white relative">
           <p class="border-white-gray-little text-[12px] text-center sm:text-base">Bitácora estelar</p>
           <div class="mobile_catalogo-span rotate-210 bg-orange"></div>
           <div class="mobile_catalogo-span rotate-240 bg-dark-pink"></div>
         </a>
-      </div>
+      </nav>
 
       <article id="mobile_tortas" class="relative mt-25 pt-33 max-w-150 mx-auto sm:pt-42">
         <div class="article_avatar">
-          <span class="article_avatar-text">
+          <div class="article_avatar-text">
             <p class="border-white-gray bg-orange article_avatar-text-title">
               Tortas
             </p>
             <p class="border-white-gray-little article_avatar-text-p">Nuestras delicias</p>
-          </span>
+          </div>
           <div class="article_avatar-ctr">
             <div class="article_avatar-ctr-icon bg-orange">
-              <img src="/images/icons/icono_torta.svg" alt="logo de tortas" />
+              <img src="/images/icons/icono_torta.svg" alt="Icono de tortas" />
             </div>
 
             <div class="article_avatar-ctr-img">
@@ -344,17 +334,17 @@
       >
         <!-- muñeca -->
         <div class="article_avatar">
-          <span class="article_avatar-text">
+          <div class="article_avatar-text">
             <p class="border-white-gray bg-pastel-viole article_avatar-text-title">
               Malteadas
             </p>
             <p class="border-white-gray-little article_avatar-text-p">Nuestras delicias</p>
-          </span>
+          </div>
           <div class="article_avatar-ctr">
             <div class="article_avatar-ctr-icon bg-pastel-viole">
               <img
                 src="/images/icons/icono_malteada.svg"
-                alt="logo de tortas"
+                alt="logo de malteadas"
               />
             </div>
 
@@ -363,7 +353,7 @@
                 <img
                   class="w-3/4 h-auto translate-x-10"
                   src="/images/avatars/personaje_malteada.webp"
-                  alt="Avatar de las tortas"
+                  alt="Avatar de las malteadas"
                 />
               </figure>
             </div>
@@ -376,12 +366,12 @@
       <article id="mobile_helados" class="relative mt-10 pt-33 max-w-150 mx-auto sm:pt-42">
         <!-- muñeca -->
         <div class="article_avatar">
-          <span class="article_avatar-text">
+          <div class="article_avatar-text">
             <p class="border-white-gray bg-green-yellow article_avatar-text-title">
               Helados
             </p>
             <p class="border-white-gray-little article_avatar-text-p">Nuestras delicias</p>
-          </span>
+          </div>
           <div class="article_avatar-ctr">
             <div class="article_avatar-ctr-icon bg-green-yellow">
               <img src="/images/icons/icono_helado.svg" alt="logo de helados" />
@@ -406,23 +396,23 @@
       <article id="mobile_bitacora" class="relative max-w-150 mx-auto mt-20 pt-70">
         <div class="article_avatar top-[100px]">
           <div class="article_avatar-ctr">
-            <a href="#mobile_helados" class="article_avatar-ctr-icon bg-green-yellow top-1/2 translate-x-1/2 -translate-y-1/2 -right-1/20">
+            <a aria-label="Ir a la sección de helados" href="#mobile_helados" class="article_avatar-ctr-icon bg-green-yellow top-1/2 translate-x-1/2 -translate-y-1/2 -right-1/20">
               <img src="/images/icons/icono_helado.svg" alt="logo de helados" />
             </a>
-            <a href="#mobile_tortas"
+            <a aria-label="Ir a la sección de tortas" href="#mobile_tortas"
               class="article_avatar-ctr-icon bg-orange top-[105%] -translate-y-1/2 translate-x-1/2 right-1/2"
             >
-              <img src="/images/icons/icono_torta.svg" alt="logo de helados" />
+              <img src="/images/icons/icono_torta.svg" alt="logo de tortas" />
             </a>
 
-            <a href="#mobile_malteadas"
+            <a aria-label="Ir a la sección de malteadas" href="#mobile_malteadas"
               class="article_avatar-ctr-icon bg-pastel-viole top-full right-0 translate-x-1/6 -translate-y-3/4">
-              <img src="/images/icons/icono_malteada.svg" alt="logo de helados"/>
+              <img src="/images/icons/icono_malteada.svg" alt="logo de malteadas"/>
             </a>
 
             <div class="article_avatar-ctr-img grid place-content-center p-8">
-              <a href="#main">
-                <img src="/images/logo_mimicafe.webp" alt="Logo mimicafé">
+              <a aria-label="Ir al home" href="#main">
+                <img src="/images/logo_mimicafe.webp" alt="Logo de la empresa mimicafé">
               </a>
             </div>
           </div>
@@ -471,37 +461,31 @@
         </div>
 
         <!-- Redes -->
-        <div
+        <nav aria-label="Redes sociales"
           id="mobile_social"
           class="absolute right-0 top-8 translate-x-1/3 bg-white-opacity border-4 border-white py-4 px-2 rounded-2xl flex flex-col gap-2"
         >
-          <a href="#" class="btn-effect-wp">
-            <img
-              src="/images/icons/icono_whatsapp.svg"
-              alt="Icono de Whatsapp"
-            />
+          <a aria-label="Ir al Whatsapp de mimicafé" href="https://www.youtube.com/@GankandGit" target="_blank" class="btn-effect-wp">
+            <img src="/images/icons/icono_whatsapp.svg" alt="Icono de Whatsapp"/>
           </a>
-          <a href="#" class="btn-effect-yt">
-            <img src="/images/icons/icono_youtube.svg" alt="Icono de Youtube" />
+          <a aria-label="Ir al canal de youtube de mimicafé" href="https://www.youtube.com/@GankandGit" target="_blank" class="btn-effect-yt">
+            <img src="/images/icons/icono_youtube.svg" alt="Icono de Youtube"/>
           </a>
-          <a href="#" class="btn-effect-ig">
-            <img
-              src="/images/icons/icono_instagram.svg"
-              alt="Icono de Instagram"
-            />
+          <a aria-label="Ir al Instagram de mimicafé" href="https://www.youtube.com/@GankandGit" target="_blank" class="btn-effect-ig">
+            <img src="/images/icons/icono_instagram.svg" alt="Icono de Instagram"/>
           </a>
-        </div>
+        </nav>
 
         <!-- Dirección -->
         <div class="relative py-14 px-10 sm:px-20 flex flex-col gap-4 overflow-hidden">
-          <span>
+          <div>
             <p class="border-white-gray-little text-[14px]">Cordoba, Colombia</p>
             <p class="border-white-gray-little text-[14px]">Carrera 41#53-38 viva</p>
-          </span>
-          <span>
+          </div>
+          <div>
             <p class="border-white-gray-little text-[14px]">Cordoba, Colombia</p>
             <p class="border-white-gray-little text-[14px]">Carrera 41#53-38 viva</p>
-          </span>
+          </div>
 
           <div class="absolute left-0 -bottom-6 bg-pastel-viole text-white border-4 border-white rounded-full px-0.5 py-8 flex flex-col items-center text-[16px]">
             <p class="-mb-2">D</p>
