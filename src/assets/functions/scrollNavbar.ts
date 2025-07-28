@@ -7,9 +7,9 @@ export const scrollNavbar = ()=>{
   gsap.to("#navbar", {
     scrollTrigger: {
       trigger: "#navbar",
-      start: "bottom bottom",
+      start: "top top",
       endTrigger: "#mobile_helados",
-      end: "bottom bottom-=70",
+      end: "bottom bottom-=300",
       pin: true,
     }
   });

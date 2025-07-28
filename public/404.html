@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Página no encontrada</title>
+</head>
+<body>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    @font-face {
+    font-family: 'Montserrat Alternates';
+    src: url('/public/fonts/MontserratAlternates-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    }
+    body {
+      background-color: hsl(226.744, 100%, 83%);
+      font-family: 'Montserrat Alternates', 'sans-serif';
+      overflow: hidden;
+    }
+    section {
+      width: 100dvw;
+      height: 100dvh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    }
+    .border-white-gray {
+    color: #fff;
+    text-shadow: 
+    2px 2px 0px hsl(240, 18%, 55%),
+    -2px 2px 0px hsl(240, 18%, 55%),
+    -2px -2px 0px hsl(240, 18%, 55%),
+    2px -2px 0px hsl(240, 18%, 55%);
+    }
+    section>img {
+      width: 300px;
+      height: auto;
+    }
+    div {
+      width: 400px;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 20px;
+      color: hsl(240, 18%, 55%);
+    }
+    a {
+      background-color: hsl(240, 50%, 96%);
+      display: inline-block;
+      margin-top: 16px;
+      text-decoration: none;
+      padding: 4px 24px;
+      padding-right: 48px;
+      border: 4px solid #fff;
+      border-radius: 24px;
+      font-size: 22px;
+      position: relative;
+    }
+    a img {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      right: 0;
+      top: 50%;
+      transform: translate(50%, -50%);
+      border: 4px solid #fff;
+      border-radius: 50%;
+      padding: 4px;
+      background-color: rgba(193, 205, 142, 1);
+    }
+    @media (max-width: 800px) {
+    section {
+      flex-direction: column;
+      gap: 0;
+    }
+    }
+  </style>
+  <section>
+    <img src="/public/images/icons/torta_error404.png" alt="Logo de error 404">
+    <div>
+      <h1 class="border-white-gray">Error 404</h1>
+      <h2 class="border-white-gray">¡Oh no! este pastel no ha sido decorado aún.</h2>
+      <p>Llegaste a una página que aún no ha pasado por el horno mágico.</p>
+      <p>Mientras tanto puedes reconectar con nuestra nave principal...</p>
+      <p>Hay café esperandote.</p>
+      <a href="https://catalogo-mimicafe.vercel.app/" class="border-white-gray">Volver al menú estelar <img src="/public/images/icons/icono_cafe.svg" alt="Logo taza de café"></a>
+    </div>
+  </section>
+</body>
+</html>

@@ -19,6 +19,9 @@ const mainBitacoraBtn = document.getElementById('main_bitacora-btn');
 const avatarLeft = document.getElementById('avatar-left');
 const avatarTop = document.getElementById('avatar-top');
 const avatarRight = document.getElementById('avatar-right');
+const mainLoading = document.getElementById('main_loading');
+const main = document.getElementById('main');
+const mobile = document.getElementById('mobile');
 
 //Variables globales 
 let isDesktop = false;
@@ -36,6 +39,9 @@ const hoverMap: [HTMLElement | null, number][] = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
+  mainLoading?.classList.add('hidden');
+  main?.classList.remove('hidden');
+  mobile?.classList.remove('hidden');
   scrollNavbar();
   if (window.innerWidth >= 1024) {
     isDesktop = true;
