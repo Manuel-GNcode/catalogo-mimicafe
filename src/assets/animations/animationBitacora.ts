@@ -37,7 +37,7 @@ tlTextBitacora.set('#main_direction', {
   paddingTop: '100px',
   paddingLeft: '70px',
   paddingRight: '70px',
-}, 0).set('.bitacora-text', {
+}, 0).set('.bitacora-text, .main_wrapper-text-bitacora', {
   display: 'block'
 }).set('#main_home-btn', {
   paddingTop: '0px',

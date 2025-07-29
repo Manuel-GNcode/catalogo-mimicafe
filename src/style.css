@@ -181,7 +181,7 @@
     @apply relative w-full max-w-80 mx-auto border-4 border-white-opacity h-60 rounded-xl;
   }
   .mobile_catalogo-a {
-    @apply w-16 h-16 aspect-square p-2 rounded-full border-4 border-white-opacity sm:w-20 sm:h-20 sm:p-4;
+    @apply w-16 h-16 aspect-square p-2 rounded-full border-4 border-white-opacity;
   }
   .mobile_catalogo-span {
     @apply absolute w-1/3 h-5 rounded-xl right-0 top-1/2 -translate-y-1/2 translate-x-[50%] origin-[-100%_center] border-4 border-white;
