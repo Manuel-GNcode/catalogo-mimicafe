@@ -38,7 +38,8 @@ const hoverMap: [HTMLElement | null, number][] = [
   [btnHelados, 3],
 ];
 
-document.addEventListener('DOMContentLoaded', () => {
+//Control del loadeer
+window.addEventListener('load', ()=>{
   mainLoading?.classList.add('hidden');
   main?.classList.remove('hidden');
   mobile?.classList.remove('hidden');
@@ -49,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     renderMobileCatalogo();
   }
-});
+})
 
 const animationHomeToProducts = async (newState:number)=>{
   if (newState == currentState) return;
